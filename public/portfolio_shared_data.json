@@ -1,16 +1,16 @@
 {
     "basic_info": {
-      "name": "Vahid Bashiri",
-      "titles": [ "Front-end Developer", "Senior Data Engineer", "Dev Team lead", "Mobile App Developer" ],
+      "name": "Hamid Bashiri",
+      "titles": [ "Game Developer", "Game Designer", "Data Scientist"],
       "social": [
         {
           "name": "github",
-          "url": "https://github.com/vbashiri/",
+          "url": "https://github.com/hbashiri/",
           "class": "fab fa-github"
         },
         {
           "name": "instagram",
-          "url": "https://www.instagram.com/moolfa/",
+          "url": "https://www.instagram.com/h__bashiri/",
           "class": "fab fa-instagram"
         }
       ],

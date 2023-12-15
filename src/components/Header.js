@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Typical from "react-typical";
 import { Icon } from '@iconify/react';
 import Switch from "react-switch";
-import avatar from "../assets/images/header/Vahid.webp";
+import avatar from "../assets/images/header/HVB_0226v.png";
 
 class Header extends Component {
   titles = [];
@@ -85,16 +85,16 @@ class Header extends Component {
               }}
             />
             <h1 style={{ color: "#f4f4f4", marginBottom: 7, textAlign: 'center' }}>
-              <span style={{ fontSize: '4.0vh' }}>Vahid Bashiri</span>
+              <span style={{ fontSize: '4.0vh' }}>Hamid Bashiri</span>
             </h1>
             <h1 style={{ color: "#f4f4f4", fontSize: '4vh', textAlign: 'center'}}>
-              <a style={{ color: "#f4f4f4", textDecoration: "none"}} href={"mailto:vbashiri1995@gmail.com"}>
+              <a style={{ color: "#f4f4f4", textDecoration: "none"}} href={"mailto:hvbashiri@gmail.com"}>
                 <span style={{ margin: 7 }} className="iconify" data-icon="mdi:email" />
               </a>
-              <a style={{ color: "#f4f4f4", textDecoration: "none"}} href={"https://www.linkedin.com/in/vbashiri/"}>
+              <a style={{ color: "#f4f4f4", textDecoration: "none"}} href={"https://www.linkedin.com/in/hbashiri/"}>
                 <span style={{ margin: 7 }} className="iconify" data-icon="mdi:linkedin" />
               </a>
-              <a style={{ color: "#f4f4f4", textDecoration: "none"}} href={"https://www.instagram.com/moolfa/"}>
+              <a style={{ color: "#f4f4f4", textDecoration: "none"}} href={"https://www.instagram.com/h__bashiri/"}>
                 <span style={{ margin: 7 }} className="iconify" data-icon="mdi:instagram" />
               </a>
             </h1>

@@ -125,6 +125,10 @@ header h1 {
 	display: block;
 	width: 100%;
 }
+.foto-simple img {
+	display: block;
+	width: 100%;
+}
 
 .foto div {
 	background: #ffffff;
@@ -143,6 +147,19 @@ header h1 {
 	position: relative;
 }
 
+.foto-simple div {
+	display: inline-block;
+	margin: 0 auto 5% auto;
+	padding: 10px 10px 5px;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: all .20s linear;
+	-moz-transition: all .20s linear;
+	transition: all .20s linear;
+	z-index: 0;
+	position: relative;
+}
+
 .foto div:after {
 	color: #333;
 	font-size: 25px;
@@ -151,7 +168,25 @@ header h1 {
 	top: 15px;
 }
 
+.foto-simple div:after {
+	color: #333;
+	font-size: 25px;
+	content: attr(title);
+	position: relative;
+	top: 15px;
+}
+
 .foto div:hover {
+	-webkit-transform: scale(1.01);
+	-moz-transform: scale(1.01);
+	transform: scale(1.01);
+	z-index: 10;
+	-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+	-moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+}
+
+.foto-simple div:hover {
 	-webkit-transform: scale(1.01);
 	-moz-transform: scale(1.01);
 	transform: scale(1.01);
@@ -223,7 +258,7 @@ header h1 {
 }
 
 #resume {
-	background: #efe1bd;
+	background: #C2E2E3;
 }
 
 .experience-icon {
@@ -241,7 +276,7 @@ header h1 {
 	text-align: left !important;
 	padding: 0.7vmin 1.2vmin 0.7vmin 1.2vmin !important;
 	vertical-align: baseline;
-	background-color: #AE944F !important;
+	background-color: #F2929A !important;
 	color: white;
 	font-weight: lighter !important;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -252,7 +287,7 @@ header h1 {
 	text-align: left !important;
 	padding: 0.7vmin 1.2vmin 0.7vmin 1.2vmin !important;
 	vertical-align: baseline;
-	background-color: #f9f5e9 !important;
+	background-color: #F1FAEE !important;
 	color: black;
 	font-weight: lighter !important;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -359,17 +394,25 @@ header h1 {
 }
 
 #portfolio {
-	background: #509faa;
+	background: #457B9D;
 	padding-bottom: 5%;
 }
 
 #sketches {
-	background: #4b6f84;
+	background: #324C6F;
 	padding-bottom: 5%;
 }
 
-.foto {
+#hexaDominoes {
+	background: #324C6F;
+	padding-bottom: 5%;
+}
 
+
+.foto {
+}
+
+.foto-simple {
 }
 
 .portfolio-item {

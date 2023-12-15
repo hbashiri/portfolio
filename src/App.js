@@ -7,32 +7,21 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import HexaDominoes from "./components/HexaDominoes";
 import Skills from "./components/Skills";
 import Banner from "./components/Banner";
 import Sketches from "./components/Sketches";
 
 
-import iis from "./assets/images/experience/iis.png";
 import colony from "./assets/images/experience/colony11.png";
-import funtory from "./assets/images/experience/funtory.png";
-import sut from "./assets/images/experience/sut.png";
-
+import utLogo from "./assets/images/experience/UT_logo.png";
 import iust from "./assets/images/experience/iust.png";
 
-import jumpUp0 from "./assets/images/projects/jumpup/jump_up.png";
-import jumpUp1 from "./assets/images/projects/jumpup/jumpup1.jpg";
-import jumpUp2 from "./assets/images/projects/jumpup/jumpup2.jpg";
-import jumpUp3 from "./assets/images/projects/jumpup/jumpup3.jpg";
 
 import playground0 from "./assets/images/projects/playground/playground_icon.png";
 import playground1 from "./assets/images/projects/playground/mushroom.png";
 import playground2 from "./assets/images/projects/playground/spidercube.png";
 import playground3 from "./assets/images/projects/playground/lake.png";
-
-import core0 from "./assets/images/projects/core/Core.png"
-import core1 from "./assets/images/projects/core/core1.png"
-import core2 from "./assets/images/projects/core/core2.png"
-import core3 from "./assets/images/projects/core/core3.png"
 
 import rebel0 from "./assets/images/projects/rebel/Rose.png"
 import rebel1 from "./assets/images/projects/rebel/Rebel1.png"
@@ -44,14 +33,19 @@ import waterfall0 from "./assets/images/projects/waterfall/waterfall0.png"
 import waterfall1 from "./assets/images/projects/waterfall/waterfall1.png"
 import waterfall2 from "./assets/images/projects/waterfall/waterfall2.png"
 
-import ged from "./assets/images/arts/concept-art/Ged.PNG";
-import blueFloyed from "./assets/images/arts/concept-art/BlueFloyed.PNG";
-import veilOfDiscord from "./assets/images/arts/concept-art/VeilOfDiscord.PNG";
-import stunningLook from "./assets/images/arts/concept-art/StunningLook.PNG";
-import deatVoodoo from "./assets/images/arts/concept-art/DeathVoodoo.PNG";
+// import ged from "./assets/images/arts/concept-art/Ged.PNG";
+// import blueFloyed from "./assets/images/arts/concept-art/BlueFloyed.PNG";
+// import veilOfDiscord from "./assets/images/arts/concept-art/VeilOfDiscord.PNG";
+// import stunningLook from "./assets/images/arts/concept-art/StunningLook.PNG";
+// import deatVoodoo from "./assets/images/arts/concept-art/DeathVoodoo.PNG";
 
 
-import parallexBackground from "./assets/images/arts/concept-art/Ged.PNG";
+
+import parallexBackground from "./assets/images/arts/DominoColorBanner.png";
+import HDIcon from "./assets/images/projects/DominoColor/HexaDaminoesIcon.png";
+import HDScreenShot1 from "./assets/images/projects/DominoColor/1st.png";
+import HDScreenShot2 from "./assets/images/projects/DominoColor/2st.png";
+import HDSimpleIcon from "./assets/images/projects/DominoColor/V1.jpg";
 
 class App extends Component {
 
@@ -62,15 +56,15 @@ class App extends Component {
       resumeData: {
         experience: [
           {
-            technologies: ["JumpUp"],
-            mainTech: ["Unity", "C#"],
-            years: "2021.5 - Now",
+            technologies:[],
+            mainTech: ["Unity", "C#", "DOTS"],
+            years: "2021.4 - 2021.10",
             title: "Game Developer",
-            company: "Funtory",
-            companyIcon: funtory,
+            company: "NoOp Army",
+            // companyIcon: funtory,
           },
           {
-            technologies: ["Core"],
+            technologies:[],
             mainTech: ["Unity", "C#"],
             years: "2020.10 - 2020.12",
             title: "Game Developer and Designer",
@@ -78,20 +72,12 @@ class App extends Component {
             companyIcon: colony,
           },
           {
-            technologies: ["Motoshub", "Tracking"],
-            mainTech: ["React-Native", "JavaScript"],
-            years: "2018.11 - 2020.09",
-            title: "React-Native Developer",
-            company: "Intelligent Information Solution Center",
-            companyIcon: iis,
-          },
-          {
             technologies: ["Major: Software Engineering"],
-            mainTech: ["Thesis: Predicting opponent’s movement in Dota 2"],
-            years: "2018.9 - 2021.02",
-            title: "Computer Science",
-            company: "Sharif University of Technology",
-            companyIcon: sut,
+            mainTech: ["Thesis: Multi-Modal route advisory system"],
+            years: "2018.9 - 2021.03",
+            title: "Computer Engineering",
+            company: "Tehran University",
+            companyIcon: utLogo,
           },
           {
             technologies: ["Major: Hardware Engineering"],
@@ -107,7 +93,7 @@ class App extends Component {
             title: "Playground",
             url: "https://moolfa.itch.io/playground",
             description: "o    Personal project which each level is a minimal prototype\n" +
-              "o    Implemented different challenging mechanics such as water simulation and shader based features\n",
+              "o    Implemented different challenging mechanics such as rope simulation and AI based NPCs\n",
             thumbnail: playground0,
             images: [
               playground1,
@@ -118,32 +104,17 @@ class App extends Component {
             startDate: 2020,
           },
           {
-            title: "Jump Up",
-            url: "https://play.google.com/store/apps/details?id=com.funtory.jumpdunk",
-            description: "o    Extended the game which increased revenue by 100%\n" +
-              "o    Polished existing features and worked closely with game designer\n",
-            thumbnail: jumpUp0,
+            title: "Hexa Dominoes",
+            url: "https://moolfa.itch.io/playground",
+            description: "o    Design and implement an original game\n" +
+                "o    Add business systems for in-app purchase, ads pop-up and data collection\n",
+            thumbnail: HDSimpleIcon,
             images: [
-              jumpUp1,
-              jumpUp2,
-              jumpUp3
+              HDScreenShot1,
+              HDScreenShot2,
             ],
-            youtube: "gA4X6anOjBM",
-            startDate: 2020,
-          },
-          {
-            title: "Core",
-            url: "https://www.dropbox.com/s/e4moj0qsm31rzfw/core.apk?dl=0",
-            description: "o    Designed and developed game from scratch\n" +
-              "o    Managed team of 3 people\n",
-            thumbnail: core0,
-            images: [
-              core1,
-              core2,
-              core3,
-            ],
-            youtube: "5lT0E_rKQwY",
-            startDate: 2019,
+            youtube: "o1SbL0i7x1M",
+            startDate: 2021,
           },
           {
             title: "Rebel",
@@ -175,22 +146,21 @@ class App extends Component {
             startDate: 2015,
           },
         ],
-        arts: [
+        dominoes: [
           {
-            title: "Sketches",
-            thumbnail: ged,
+            title: "Hexa Dominoes",
+            thumbnail: HDIcon,
             images: [
-              ged,
-              blueFloyed,
-              veilOfDiscord,
-              stunningLook,
-              deatVoodoo,
+              HDScreenShot1,
+              HDScreenShot1,
             ],
+            youtube: "kRbxADt-gVc",
           },
           ],
         basic_info: {
           section_name: {
             experience: "My Journey",
+            hexaDominoes: "Hexa Dominoes",
             projects: "Projects",
             sketches: "Life Interests"
           }
@@ -237,7 +207,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div style={{height: window.innerHeight, flex: 1, display: "flex", flexDirection: "column", backgroundColor: '#4b6f84'}}>
+        <div style={{height: window.innerHeight, flex: 1, display: "flex", flexDirection: "column", backgroundColor: '#324C6F'}}>
           <Banner/>
           <Header sharedData={this.state.sharedData.basic_info} />
         </div>
@@ -245,14 +215,19 @@ class App extends Component {
           resumeExperience={this.state.resumeData.experience}
           resumeBasicInfo={this.state.resumeData.basic_info}
         />
+        <HexaDominoes
+            resumeProjects={this.state.resumeData.dominoes}
+            resumeBasicInfo={this.state.resumeData.basic_info}
+        />
         <Projects
           resumeProjects={this.state.resumeData.projects}
           resumeBasicInfo={this.state.resumeData.basic_info}
         />
-        <Parallax bgImage={parallexBackground} strength={500}>
-          <div style={{ height: window.innerHeight }}>
-          </div>
-        </Parallax>
+
+        {/*<Parallax bgImage={parallexBackground} strength={500}>*/}
+        {/*  <div style={{ height: window.innerHeight }}>*/}
+        {/*  </div>*/}
+        {/*</Parallax>*/}
         <Sketches
           resumeProjects={this.state.resumeData.arts}
           resumeBasicInfo={this.state.resumeData.basic_info}
