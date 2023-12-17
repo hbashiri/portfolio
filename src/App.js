@@ -15,21 +15,33 @@ import Sketches from "./components/Sketches";
 
 import colony from "./assets/images/experience/colony11.png";
 import utLogo from "./assets/images/experience/UT_logo.png";
+import moolfa from "./assets/images/experience/moolfa.png"
+
 import iust from "./assets/images/experience/iust.png";
 
-
-import playground0 from "./assets/images/projects/playground/playground_icon.png";
+import playground0 from "./assets/images/projects/playground/playground_icon.jpg";
 import playground1 from "./assets/images/projects/playground/mushroom.png";
 import playground2 from "./assets/images/projects/playground/spidercube.png";
 import playground3 from "./assets/images/projects/playground/lake.png";
 
-import rebel0 from "./assets/images/projects/rebel/Rose.png"
+import bridgeRun from "./assets/images/projects/bridgerun/icon.jpg";
+import bridgeRun1 from "./assets/images/projects/bridgerun/gameplay0.png";
+import bridgeRun2 from "./assets/images/projects/bridgerun/gameplay1.png";
+import bridgeRun3 from "./assets/images/projects/bridgerun/gameplay2.png";
+
+
+import rebel0 from "./assets/images/projects/rebel/Rose.jpg"
 import rebel1 from "./assets/images/projects/rebel/Rebel1.png"
 import rebel2 from "./assets/images/projects/rebel/Rebel2.png"
 import rebel3 from "./assets/images/projects/rebel/Rebel3.png"
 import rebel4 from "./assets/images/projects/rebel/Rebel4.png"
 
-import waterfall0 from "./assets/images/projects/waterfall/waterfall0.png"
+import hexaDominoes0 from "./assets/images/projects/hexadominoes/Icon.jpg"
+import hexaDominoes1 from "./assets/images/projects/hexadominoes/gameplay1.png"
+import hexaDominoes2 from "./assets/images/projects/hexadominoes/gameplay2.png"
+import hexaDominoes3 from "./assets/images/projects/hexadominoes/gameplay3.png"
+
+import waterfall0 from "./assets/images/projects/waterfall/waterfall0.jpg"
 import waterfall1 from "./assets/images/projects/waterfall/waterfall1.png"
 import waterfall2 from "./assets/images/projects/waterfall/waterfall2.png"
 
@@ -38,8 +50,6 @@ import waterfall2 from "./assets/images/projects/waterfall/waterfall2.png"
 // import veilOfDiscord from "./assets/images/arts/concept-art/VeilOfDiscord.PNG";
 // import stunningLook from "./assets/images/arts/concept-art/StunningLook.PNG";
 // import deatVoodoo from "./assets/images/arts/concept-art/DeathVoodoo.PNG";
-
-
 
 import parallexBackground from "./assets/images/arts/DominoColorBanner.png";
 import HDIcon from "./assets/images/projects/DominoColor/HexaDaminoesIcon.png";
@@ -52,6 +62,7 @@ class App extends Component {
   constructor(props) {
     super();
     this.state = {
+      windowInnerHeight: window.innerHeight,
       foo: "bar",
       resumeData: {
         experience: [
@@ -78,6 +89,14 @@ class App extends Component {
             title: "Computer Engineering",
             company: "Tehran University",
             companyIcon: utLogo,
+          },
+          {
+            technologies: ["Hexa Dominoes, Waterfall"],
+            mainTech: ["Unity", "C#"],
+            years: "2015.9 - 2017.10",
+            title: "Freelance Game Developer",
+            company: "Freelance",
+            companyIcon: moolfa,
           },
           {
             technologies: ["Major: Hardware Engineering"],
@@ -131,19 +150,30 @@ class App extends Component {
             youtube: "kRbxADt-gVc",
             startDate: 2019,
           },
-
+          {
+            title: "Hexa Dominoes",
+            url: "https://play.google.com/store/apps/details?id=com.moolfa.dominocolor",
+            description: "o    My first published project in google play \n" +
+                "o    Helped in developing level manager and designed new levels\n",
+            thumbnail: hexaDominoes0,
+            images: [
+              hexaDominoes1,
+              hexaDominoes2,
+              hexaDominoes3,
+            ],
+            startDate: 2017,
+          },
           {
             title: "Waterfall",
             url: "https://hvbashiri.itch.io/waterfall",
             description: "o    Final project of fundamentals of game design course \n" +
-              "o    Worked on character animations and core mechanics\n" +
-              "o    Worked as a member of 5 people team\n",
+              "o    Worked on character animations and core gameplay mechanics\n",
             thumbnail: waterfall0,
             images: [
               waterfall1,
               waterfall2,
             ],
-            startDate: 2015,
+            startDate: 2016,
           },
         ],
         dominoes: [
@@ -173,6 +203,18 @@ class App extends Component {
 
   componentDidMount() {
     this.loadSharedData();
+    this.calculateBannerHeight(window.innerHeight, window.innerWidth);
+
+    window.addEventListener("orientationchange", () => {
+      this.calculateBannerHeight(window.innerWidth, window.innerHeight);
+    })
+  }
+
+  calculateBannerHeight(height, width) {
+    var bannerHeight = height < width ? height / 3 : width / 2;
+    bannerHeight = bannerHeight > 300 ? bannerHeight : 300;
+    var mobileVersion = bannerHeight <= 300 || navigator.platform.indexOf('MacIntel') !== -1;
+    this.setState({windowInnerHeight: height, bannerSize: bannerHeight, mobileVersion});
   }
 
   loadResumeFromPath(path) {
@@ -207,7 +249,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div style={{height: window.innerHeight, flex: 1, display: "flex", flexDirection: "column", backgroundColor: '#324C6F'}}>
+        <div style={{height: this.state.windowInnerHeight, flex: 1, display: "flex", flexDirection: "column", backgroundColor: '#324C6F'}}>
           <Banner/>
           <Header sharedData={this.state.sharedData.basic_info} />
         </div>
@@ -228,6 +270,10 @@ class App extends Component {
         {/*  <div style={{ height: window.innerHeight }}>*/}
         {/*  </div>*/}
         {/*</Parallax>*/}
+        <Parallax bgImage={parallexBackground} strength={500}>
+          <div style={{ height: this.state.windowInnerHeight }}>
+          </div>
+        </Parallax>
         <Sketches
           resumeProjects={this.state.resumeData.arts}
           resumeBasicInfo={this.state.resumeData.basic_info}

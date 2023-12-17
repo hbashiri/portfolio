@@ -52,7 +52,7 @@ class Projects extends Component {
           <h1 className="section-title" style={{ color: "black", fontSize: "300%" }}>
             <span>{sectionName}</span>
           </h1>
-          <div className="col-md-12 mx-auto">
+          <div className="col-md-12">
             <div className="row mx-auto">{projects}</div>
           </div>
           <ProjectDetailsModal

@@ -168,14 +168,6 @@ header h1 {
 	top: 15px;
 }
 
-.foto-simple div:after {
-	color: #333;
-	font-size: 25px;
-	content: attr(title);
-	position: relative;
-	top: 15px;
-}
-
 .foto div:hover {
 	-webkit-transform: scale(1.01);
 	-moz-transform: scale(1.01);
@@ -376,9 +368,9 @@ header h1 {
 
 .modal-description {
 	text-align: justify;
-	padding: 5px 5px 0 30px;
+	padding: 5px 5px 10px 10px;
 	margin-bottom: 20px;
-	font-size: 1.5vmin;
+	font-size: small;
 }
 
 .awssld__next {
