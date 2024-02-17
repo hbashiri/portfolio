@@ -400,6 +400,11 @@ header h1 {
 	padding-bottom: 5%;
 }
 
+#ephemeralLightSection {
+	background: #324C6F;
+	padding-bottom: 5%;
+}
+
 
 .foto {
 }
@@ -449,6 +454,14 @@ header h1 {
 .section-title {
 	padding-top: 5%;
 	padding-bottom: 5%;
+	font: 18px/24px 'opensans-bold', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: #fff;
+	text-align: center;
+}
+
+.subsection-title {
 	font: 18px/24px 'opensans-bold', sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 3px;

@@ -126,9 +126,16 @@ class Header extends Component {
                 marginRight: 10,
               }}
             >
+            {/*<span style={{ fontSize: '2.3vh' }}>*/}
+            {/*    Passionate game developer who have over 7 years of experience in software engineering and worked 5 years dedicatedly making games using Unity engine. Thrive on collaborative teamwork and have led small multi-disciplinary teams with different skill levels to deliver polished games. Have experience developing android libraries as well as Unity tools to ease game production and always welcome new challenges and opportunities to learn.*/}
+            {/*    Have a look at my technical articles in <a style={{color: "#AE944F"}} href={"https://medium.com/@vbashiri1995"}>Medium</a>.*/}
+            {/*</span>*/}
             <span style={{ fontSize: '2.3vh' }}>
-                Passionate game developer who have over 7 years of experience in software engineering and worked 5 years dedicatedly making games using Unity engine. Thrive on collaborative teamwork and have led small multi-disciplinary teams with different skill levels to deliver polished games. Have experience developing android libraries as well as Unity tools to ease game production and always welcome new challenges and opportunities to learn.
-                Have a look at my technical articles in <a style={{color: "#AE944F"}} href={"https://medium.com/@vbashiri1995"}>Medium</a>.
+                Game developer with 5 years of experience focused on PC games using Unity engine and C#. I excel in various aspects of game development,
+                including designing project architecture, developing AI systems, creating tools and implementing gameplay features.
+                With an additional 2 years of experience in software engineering and an MSc degree in software engineering,
+                I have a solid educational background that complements my practical experience.
+                Have a look at my technical articles in <a style={{color: "#d06812"}} href={"https://medium.com/@hvbashiri"}>Medium</a>.
             </span>
             </h3>
           </div>

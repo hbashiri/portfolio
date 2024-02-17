@@ -72,15 +72,15 @@ class HexaDominoes extends Component {
                                     marginRight: 10,
                                 }}
                             >
-                <span style={{ fontSize: '2.5vh' }}>
-                  I like designing characters and drawing fan art as a hobby.
-                  Video games have always been my secret getaway tho.
-                  Online games which I can play with my friends are my favorite.
-                  Also, I like playing indie games when I have considerable free time.
-                  On top of that, I tend to watch movies and series.
-                  When I get bored of all these things,
-                  listening to rock/metal music and playing sports like futsal and ping pong is the way to go.
-                </span>
+                                <span style={{ fontSize: '2.5vh' }}>
+                                  I like designing characters and drawing fan art as a hobby.
+                                  Video games have always been my secret getaway tho.
+                                  Online games which I can play with my friends are my favorite.
+                                  Also, I like playing indie games when I have considerable free time.
+                                  On top of that, I tend to watch movies and series.
+                                  When I get bored of all these things,
+                                  listening to rock/metal music and playing sports like futsal and ping pong is the way to go.
+                                </span>
                                 <p style={{ fontSize: '2.5vh' }}>
                                     Here is some of my sketches.
                                 </p>

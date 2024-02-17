@@ -8,6 +8,7 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import HexaDominoes from "./components/HexaDominoes";
+import EphemeralLight from "./components/EphemeralLight";
 import Skills from "./components/Skills";
 import Banner from "./components/Banner";
 import Sketches from "./components/Sketches";
@@ -16,18 +17,14 @@ import Sketches from "./components/Sketches";
 import colony from "./assets/images/experience/colony11.png";
 import utLogo from "./assets/images/experience/UT_logo.png";
 import moolfa from "./assets/images/experience/moolfa.png"
-
 import iust from "./assets/images/experience/iust.png";
+import noopArmyLogo from "./assets/images/experience/noopArmyLogo.png";
+import leangoLogo from "./assets/images/experience/leangoLogo.png";
 
 import playground0 from "./assets/images/projects/playground/playground_icon.jpg";
 import playground1 from "./assets/images/projects/playground/mushroom.png";
 import playground2 from "./assets/images/projects/playground/spidercube.png";
 import playground3 from "./assets/images/projects/playground/lake.png";
-
-import bridgeRun from "./assets/images/projects/bridgerun/icon.jpg";
-import bridgeRun1 from "./assets/images/projects/bridgerun/gameplay0.png";
-import bridgeRun2 from "./assets/images/projects/bridgerun/gameplay1.png";
-import bridgeRun3 from "./assets/images/projects/bridgerun/gameplay2.png";
 
 
 import rebel0 from "./assets/images/projects/rebel/Rose.jpg"
@@ -45,12 +42,6 @@ import waterfall0 from "./assets/images/projects/waterfall/waterfall0.jpg"
 import waterfall1 from "./assets/images/projects/waterfall/waterfall1.png"
 import waterfall2 from "./assets/images/projects/waterfall/waterfall2.png"
 
-// import ged from "./assets/images/arts/concept-art/Ged.PNG";
-// import blueFloyed from "./assets/images/arts/concept-art/BlueFloyed.PNG";
-// import veilOfDiscord from "./assets/images/arts/concept-art/VeilOfDiscord.PNG";
-// import stunningLook from "./assets/images/arts/concept-art/StunningLook.PNG";
-// import deatVoodoo from "./assets/images/arts/concept-art/DeathVoodoo.PNG";
-
 import parallexBackground from "./assets/images/arts/DominoColorBanner.png";
 import HDIcon from "./assets/images/projects/DominoColor/HexaDaminoesIcon.png";
 import HDScreenShot1 from "./assets/images/projects/DominoColor/1st.png";
@@ -67,12 +58,20 @@ class App extends Component {
       resumeData: {
         experience: [
           {
-            technologies:[],
-            mainTech: ["Unity", "C#", "DOTS"],
+            technologies:["Ephemeral Light"],
+            mainTech: ["Unity", "C#", "UI Toolkit", "MVP"],
+            years: "2022.5 - present",
+            title: "Game Developer",
+            company: "Lean Go Studio",
+            companyIcon: leangoLogo,
+          },
+          {
+            technologies:["Enlightenment"],
+            mainTech: ["Unity", "C#", "DOTS", "UI Toolkit"],
             years: "2021.4 - 2021.10",
             title: "Game Developer",
             company: "NoOp Army",
-            // companyIcon: funtory,
+            companyIcon: noopArmyLogo,
           },
           {
             technologies:[],
@@ -83,28 +82,28 @@ class App extends Component {
             companyIcon: colony,
           },
           {
-            technologies: ["Major: Software Engineering"],
-            mainTech: ["Thesis: Multi-Modal route advisory system"],
-            years: "2018.9 - 2021.03",
-            title: "Computer Engineering",
-            company: "Tehran University",
-            companyIcon: utLogo,
+              mainTech: ["Major: Software Engineering"],
+              technologies: ["Thesis: Multi-Modal route advisory system"],
+              years: "2018.9 - 2021.03",
+              title: "Computer Engineering",
+              company: "Tehran University",
+              companyIcon: utLogo,
           },
           {
-            technologies: ["Hexa Dominoes, Waterfall"],
-            mainTech: ["Unity", "C#"],
-            years: "2015.9 - 2017.10",
-            title: "Freelance Game Developer",
-            company: "Freelance",
-            companyIcon: moolfa,
+              technologies: ["Hexa Dominoes, Waterfall"],
+              mainTech: ["Unity", "C#"],
+              years: "2015.9 - 2017.10",
+              title: "Freelance Game Developer",
+              company: "Freelance",
+              companyIcon: moolfa,
           },
           {
-            technologies: ["Major: Hardware Engineering"],
-            mainTech: [],
-            years: "2013.09 - 2018.06",
-            title: "Computer Engineering",
-            company: "Iran University of Science and Technology",
-            companyIcon: iust,
+              mainTech: ["Major: Hardware Engineering"],
+              technologies: ["Game design course in 2016"],
+              years: "2013.09 - 2018.06",
+              title: "Computer Engineering",
+              company: "Iran University of Science and Technology",
+              companyIcon: iust,
           }
         ],
         projects: [
@@ -178,7 +177,7 @@ class App extends Component {
         ],
         dominoes: [
           {
-            title: "Hexa Dominoes",
+            title: "Hexa DominoesXX",
             thumbnail: HDIcon,
             images: [
               HDScreenShot1,
@@ -187,9 +186,44 @@ class App extends Component {
             youtube: "kRbxADt-gVc",
           },
           ],
+        ephemeralLight:
+          {
+            title: "Ephemeral Light",
+            description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod" +
+                " tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud" +
+                " exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel" +
+                " eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat " +
+                "nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril" +
+                " delenit augue duis dolore te feugait nulla facilisi.",
+            thumbnail: HDIcon,
+            images: [
+              HDScreenShot1,
+              HDScreenShot1,
+            ],
+            youtube: "kRbxADt-gVc",
+            projects: [
+              {
+                title: "Wit, a visual novel tool",
+                url: "https://moolfa.itch.io/playground",
+                description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod" +
+                    " tincidunt ut laoreet dolore magna aliquam erat volu nulla facilisis at vero eros et accumsan et iusto" +
+                    " odio dignissim qui blandit praesent luptatum zzril",
+                youtube: "VEHTnPa6LaU",
+              },
+              {
+                title: "Mesh Generation",
+                url: "https://moolfa.itch.io/playground",
+                description: "o    Personal project which each level is a minimal prototype\n" +
+                    "o    Implemented different challenging mechanics such as rope simulation and AI based NPCs\n",
+                youtube: "VEHTnPa6LaU",
+              }
+            ],
+          },
         basic_info: {
           section_name: {
             experience: "My Journey",
+            ephemeralLight: "Ephemeral Light",
+            enlightenment: "Enlightenment",
             hexaDominoes: "Hexa Dominoes",
             projects: "Projects",
             sketches: "Life Interests"
@@ -257,10 +291,14 @@ class App extends Component {
           resumeExperience={this.state.resumeData.experience}
           resumeBasicInfo={this.state.resumeData.basic_info}
         />
-        <HexaDominoes
-            resumeProjects={this.state.resumeData.dominoes}
+        <EphemeralLight
+            resumeProjects={this.state.resumeData.ephemeralLight}
             resumeBasicInfo={this.state.resumeData.basic_info}
-        />
+          />
+        {/*<HexaDominoes*/}
+        {/*    resumeProjects={this.state.resumeData.dominoes}*/}
+        {/*    resumeBasicInfo={this.state.resumeData.basic_info}*/}
+        {/*/>*/}
         <Projects
           resumeProjects={this.state.resumeData.projects}
           resumeBasicInfo={this.state.resumeData.basic_info}
