@@ -2,6 +2,16 @@
 @import '../src/scss/themes/theme-light.scss';
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
 
+$--backGround-color: #264653;
+$--textTitle-color: #fcbf49;
+$--textContent-color: #eae2b7;
+$--secondBackground-color: #e9c46a;
+$--highlight-color: #e76f51;
+$--highlight2-color: #2a9d8f;
+$--section-background-color: #766ead;
+$--section-second-background-color: #e8e2bc;
+
+
 html {
 	font-size: 62.5%;
 	-webkit-font-smoothing: antialiased;
@@ -38,7 +48,7 @@ header {
 	-webkit-background-size: cover;
 	text-align: center;
 	overflow: hidden;
-	background-color: #e9d5a1;
+	background-color: $--backGround-color;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -250,7 +260,7 @@ header h1 {
 }
 
 #resume {
-	background: #C2E2E3;
+	background: $--secondBackground-color;
 }
 
 .experience-icon {
@@ -268,7 +278,7 @@ header h1 {
 	text-align: left !important;
 	padding: 0.7vmin 1.2vmin 0.7vmin 1.2vmin !important;
 	vertical-align: baseline;
-	background-color: #F2929A !important;
+	background-color: $--highlight-color !important;
 	color: white;
 	font-weight: lighter !important;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -279,8 +289,8 @@ header h1 {
 	text-align: left !important;
 	padding: 0.7vmin 1.2vmin 0.7vmin 1.2vmin !important;
 	vertical-align: baseline;
-	background-color: #F1FAEE !important;
-	color: black;
+	background-color: $--highlight2-color !important;
+	color:  white;
 	font-weight: lighter !important;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -386,25 +396,37 @@ header h1 {
 }
 
 #portfolio {
-	background: #457B9D;
+	background: $--secondBackground-color;
 	padding-bottom: 5%;
 }
 
 #sketches {
-	background: #324C6F;
+	background: $--backGround-color;
 	padding-bottom: 5%;
 }
 
 #hexaDominoes {
-	background: #324C6F;
+	background: $--backGround-color;
 	padding-bottom: 5%;
 }
 
 #ephemeralLightSection {
-	background: #324C6F;
+	background: $--backGround-color;
 	padding-bottom: 5%;
 }
 
+.main-background-color-variable{
+	background-color: $--backGround-color;
+}
+
+.main-section-color-variable{
+	color: $--section-background-color;
+}
+
+.second-section-color-variable{
+	color: $--section-second-background-color;
+	background-color: $--section-second-background-color;
+}
 
 .foto {
 }

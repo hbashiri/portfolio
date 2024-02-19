@@ -245,7 +245,7 @@ class App extends Component {
   }
 
   calculateBannerHeight(height, width) {
-    var bannerHeight = height < width ? height / 3 : width / 2;
+    var bannerHeight = height < width ? height > 900 ? 480:  height / 3 : width / 2;
     bannerHeight = bannerHeight > 300 ? bannerHeight : 300;
     var mobileVersion = bannerHeight <= 300 || navigator.platform.indexOf('MacIntel') !== -1;
     this.setState({windowInnerHeight: height, bannerSize: bannerHeight, mobileVersion});
@@ -283,7 +283,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div style={{height: this.state.windowInnerHeight, flex: 1, display: "flex", flexDirection: "column", backgroundColor: '#324C6F'}}>
+        <div
+            className= "main-background-color-variable"
+            style={{height: this.state.windowInnerHeight, flex: 1, display: "flex", flexDirection: "column"}}>
           <Banner/>
           <Header sharedData={this.state.sharedData.basic_info} />
         </div>

@@ -27,7 +27,7 @@ class Banner extends Component {
     }
 
     calculateBannerHeight(height, width) {
-        var bannerHeight = height < width ? height / 3 : width / 2;
+        var bannerHeight = height < width ? height > 900 ? 480:  height / 3 : width / 2;
         bannerHeight = bannerHeight > 300 ? bannerHeight : 300;
         this.setState({bannerSize: bannerHeight});
     }
@@ -57,13 +57,15 @@ class Banner extends Component {
           <img src={sky} style={{flex: 1 ,aspectRatio: 3.2}} />
         </div>
         <div id="cloud0"
-             style={{height: this.state.bannerSize}}
+             style={{height: this.state.bannerSize,
+                 width: this.state.bannerSize * 3.2}}
              className="cloud cloud0"
         >
           <img src={bCloud1} style={{flex: 1 ,aspectRatio: 3.2}} />
         </div>
         <div id="cloud1"
-             style={{height: this.state.bannerSize}}
+             style={{height: this.state.bannerSize,
+                 width: this.state.bannerSize * 3.2}}
              className="cloud cloud1"
         >
           <img src={bCloud1} style={{flex: 1 ,aspectRatio: 3.2}} />
@@ -72,6 +74,7 @@ class Banner extends Component {
              className="cloud cloud2"
              style={{
                height: this.state.bannerSize,
+                 width: this.state.bannerSize * 3.2
              }}
         >
           <img src={bCloud2} style={{flex: 1 ,aspectRatio: 3.2}} />
@@ -80,6 +83,7 @@ class Banner extends Component {
              className="cloud cloud3"
              style={{
                height: this.state.bannerSize,
+                 width: this.state.bannerSize * 3.2
              }}
         >
           <img src={bCloud3} style={{flex: 1 ,aspectRatio: 3.2}} />
@@ -88,6 +92,7 @@ class Banner extends Component {
              className="cloud cloud4"
              style={{
                height: this.state.bannerSize,
+                 width: this.state.bannerSize * 3.2
              }}
         >
           <img src={fCloud1} style={{flex: 1 ,aspectRatio: 3.2}} />
@@ -96,6 +101,7 @@ class Banner extends Component {
              className="cloud cloud5"
              style={{
                height: this.state.bannerSize,
+                 width: this.state.bannerSize * 3.2
              }}
         >
           <img src={fCloud2} style={{flex: 1 ,aspectRatio: 3.2}} />
@@ -103,7 +109,8 @@ class Banner extends Component {
         <div id="cloud6"
              className="cloud6 cloud"
              style={{
-               height: this.state.bannerSize,
+                 height: this.state.bannerSize,
+                 width: this.state.bannerSize * 3.2
              }}
         >
           <img src={fCloud3} style={{flex: 1 ,aspectRatio: 3.2}} />
@@ -112,6 +119,7 @@ class Banner extends Component {
              className="cloud7 cloud"
              style={{
                height: this.state.bannerSize,
+                 width: this.state.bannerSize * 3.2
              }}
         >
           <img src={fCloud2} style={{flex: 1 ,aspectRatio: 3.2}} />

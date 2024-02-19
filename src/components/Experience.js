@@ -10,7 +10,8 @@ class Experience extends Component {
   render() {
     if (this.props.resumeExperience && this.props.resumeBasicInfo) {
       var sectionName = this.props.resumeBasicInfo.section_name.experience;
-      var work = this.props.resumeExperience.map(function (work, i) {
+      var work = this.props.resumeExperience.map(function (work, i)
+      {
         const technologies = work.technologies;
         const mainTechnologies = work.mainTech;
 
@@ -33,8 +34,9 @@ class Experience extends Component {
           return (
             <Badge
               pill
+              classNam
               bg={"#f9f5e9"}
-              color={"#000000"}
+              color={"#EAE2B7"}
               className="experience-badge
               mt-xl-4 mt-md-3 mt-sm-2
               mr-xl-4 mr-md-3 mr-sm-2
@@ -48,12 +50,12 @@ class Experience extends Component {
         return (
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ paddingLeft: "20px" }}
+            contentStyle={{ paddingLeft: "20px" , background: "#EAE2B7", }}
             dateClassName="element-date"
             date={work.years}
             iconStyle={{
-              background: "#F1FAEE",
-              color: "#fff",
+              background: "#EAE2B7",
+              color: "#ffffff",
               textAlign: "center",
             }}
             icon={<img src={work.companyIcon} style={{ maxWidth: '100%', maxHeight: '100%', padding: 5 }} />}
@@ -97,7 +99,7 @@ class Experience extends Component {
             {work}
             <VerticalTimelineElement
               iconStyle={{
-                background: "#F2929A",
+                background: "#2A9D8F",
                 color: "#fff",
                 textAlign: "center",
               }}

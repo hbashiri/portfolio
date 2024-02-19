@@ -68,11 +68,11 @@
 
 
 @keyframes cloudmove {
-    from {left: -95%;}
-    to {left: +50%;}
+    from {left: -95vw;}
+    to {left: +110vw;}
 }
 
 @keyframes tiny-cloudmove {
-    from {left: -90%;}
-    to {left: +30%;}
+    from {left: -90vw;}
+    to {left: +110vw;}
 }
