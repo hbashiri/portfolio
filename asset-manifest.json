@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.334461f7.chunk.css",
-    "main.js": "/portfolio/static/js/main.d8b02e54.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.d8b02e54.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.d83a8501.chunk.css",
+    "main.js": "/portfolio/static/js/main.4f94bc44.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.4f94bc44.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.1b893ad1.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.1b893ad1.js.map",
     "static/css/2.d64471e2.chunk.css": "/portfolio/static/css/2.d64471e2.chunk.css",
     "static/js/2.c5d3806a.chunk.js": "/portfolio/static/js/2.c5d3806a.chunk.js",
     "static/js/2.c5d3806a.chunk.js.map": "/portfolio/static/js/2.c5d3806a.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.d1e4356dd2bbe03f9262018c0731d1a1.js": "/portfolio/precache-manifest.d1e4356dd2bbe03f9262018c0731d1a1.js",
+    "precache-manifest.9717094cf7b45e417a7758df01b81dae.js": "/portfolio/precache-manifest.9717094cf7b45e417a7758df01b81dae.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/2.d64471e2.chunk.css.map": "/portfolio/static/css/2.d64471e2.chunk.css.map",
-    "static/css/main.334461f7.chunk.css.map": "/portfolio/static/css/main.334461f7.chunk.css.map",
+    "static/css/main.d83a8501.chunk.css.map": "/portfolio/static/css/main.d83a8501.chunk.css.map",
     "static/js/2.c5d3806a.chunk.js.LICENSE.txt": "/portfolio/static/js/2.c5d3806a.chunk.js.LICENSE.txt",
     "static/media/1st.png": "/portfolio/static/media/1st.dcdeeadc.png",
     "static/media/2st.png": "/portfolio/static/media/2st.1167fffc.png",
@@ -47,7 +47,7 @@
     "static/js/runtime-main.1b893ad1.js",
     "static/css/2.d64471e2.chunk.css",
     "static/js/2.c5d3806a.chunk.js",
-    "static/css/main.334461f7.chunk.css",
-    "static/js/main.d8b02e54.chunk.js"
+    "static/css/main.d83a8501.chunk.css",
+    "static/js/main.4f94bc44.chunk.js"
   ]
 }
