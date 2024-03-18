@@ -50,11 +50,13 @@ class Experience extends Component {
         return (
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ paddingLeft: "20px" , background: "#EAE2B7", }}
+            contentStyle={{ paddingLeft: "20px" , background: "#e2dcbf",
+              color: "#000000" }}
+            contentArrowStyle={{borderRightColor: "#e2dcbf"}}
             dateClassName="element-date"
             date={work.years}
             iconStyle={{
-              background: "#EAE2B7",
+              background: "#e2dcbf",
               color: "#ffffff",
               textAlign: "center",
             }}
@@ -95,7 +97,9 @@ class Experience extends Component {
           </div>
         </div>
         <div className="col-md-8 mx-auto">
-          <VerticalTimeline>
+          <VerticalTimeline
+              lineColor= 'black'
+          >
             {work}
             <VerticalTimelineElement
               iconStyle={{

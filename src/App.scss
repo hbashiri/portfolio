@@ -5,7 +5,7 @@
 $--backGround-color: #264653;
 $--textTitle-color: #fcbf49;
 $--textContent-color: #eae2b7;
-$--secondBackground-color: #e9c46a;
+$--secondBackground-color: #90c6b3;
 $--highlight-color: #e76f51;
 $--highlight2-color: #2a9d8f;
 $--section-background-color: #766ead;
@@ -299,7 +299,6 @@ header h1 {
 	max-width: 98% !important;
 }
 
-
 .vertical-timeline-element-date {
 	padding: 0 !important;
 	margin: 0 !important;
@@ -479,16 +478,20 @@ header h1 {
 	font: 18px/24px 'opensans-bold', sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	color: #fff;
+	color:  $--textTitle-color;
 	text-align: center;
 }
 
 .subsection-title {
-	font: 18px/24px 'opensans-bold', sans-serif;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	color: #fff;
+	//font: 18px/24px 'opensans-bold', sans-serif;
+	//text-transform: uppercase;
+	//letter-spacing: 3px;
+	color: $--textTitle-color;
+	font-size: 220%;
 	text-align: center;
+}
+.subsection-text{
+	font: 18px/24px 'opensans', sans-serif;
 }
 
 .skill-icon {

@@ -19,7 +19,7 @@ import utLogo from "./assets/images/experience/UT_logo.png";
 import moolfa from "./assets/images/experience/moolfa.png"
 import iust from "./assets/images/experience/iust.png";
 import noopArmyLogo from "./assets/images/experience/noopArmyLogo.png";
-import leangoLogo from "./assets/images/experience/leangoLogo.png";
+import PaeezanLogo from "./assets/images/experience/PaeezanLogo.png";
 
 import playground0 from "./assets/images/projects/playground/playground_icon.jpg";
 import playground1 from "./assets/images/projects/playground/mushroom.png";
@@ -42,11 +42,20 @@ import waterfall0 from "./assets/images/projects/waterfall/waterfall0.jpg"
 import waterfall1 from "./assets/images/projects/waterfall/waterfall1.png"
 import waterfall2 from "./assets/images/projects/waterfall/waterfall2.png"
 
+import art0 from "./assets/images/arts/concept-art/Paint1.jpg"
+import art1 from "./assets/images/arts/concept-art/PixelAsset1.png"
+import art2 from "./assets/images/arts/concept-art/PixelAsset2.png"
+import art3 from "./assets/images/arts/concept-art/Sketch1.jpg"
+import art4 from "./assets/images/arts/concept-art/Sketch2.jpg"
+import art5 from "./assets/images/arts/concept-art/watermill.gif"
+
 import parallexBackground from "./assets/images/arts/DominoColorBanner.png";
 import HDIcon from "./assets/images/projects/DominoColor/HexaDaminoesIcon.png";
 import HDScreenShot1 from "./assets/images/projects/DominoColor/1st.png";
 import HDScreenShot2 from "./assets/images/projects/DominoColor/2st.png";
 import HDSimpleIcon from "./assets/images/projects/DominoColor/V1.jpg";
+
+import ELPortrait from "./assets/images/projects/EphemeralLight/Portrait.jpg"
 
 class App extends Component {
 
@@ -62,8 +71,8 @@ class App extends Component {
             mainTech: ["Unity", "C#", "UI Toolkit", "MVP"],
             years: "2022.5 - present",
             title: "Game Developer",
-            company: "Lean Go Studio",
-            companyIcon: leangoLogo,
+            company: "Paeezan Studio",
+            companyIcon: PaeezanLogo,
           },
           {
             technologies:["Enlightenment"],
@@ -108,6 +117,20 @@ class App extends Component {
         ],
         projects: [
           {
+            title: "Bridge Run",
+            url: "https://moolfa.itch.io/playground",
+            description: "o    Personal project which each level is a minimal prototype\n" +
+                "o    Implemented different challenging mechanics such as rope simulation and AI based NPCs\n",
+            thumbnail: playground0,
+            images: [
+              playground1,
+              playground2,
+              playground3,
+            ],
+            youtube: "o1SbL0i7x1M",
+            startDate: 2022,
+          },
+          {
             title: "Playground",
             url: "https://moolfa.itch.io/playground",
             description: "o    Personal project which each level is a minimal prototype\n" +
@@ -119,19 +142,19 @@ class App extends Component {
               playground3,
             ],
             youtube: "o1SbL0i7x1M",
-            startDate: 2020,
+            startDate: 2022,
           },
           {
             title: "Hexa Dominoes",
-            url: "https://moolfa.itch.io/playground",
-            description: "o    Design and implement an original game\n" +
-                "o    Add business systems for in-app purchase, ads pop-up and data collection\n",
-            thumbnail: HDSimpleIcon,
+            url: "https://play.google.com/store/apps/details?id=com.moolfa.dominocolor",
+            description: "o    My first published project in google play \n" +
+                "o    Helped in developing level manager and designed new levels\n",
+            thumbnail: hexaDominoes0,
             images: [
-              HDScreenShot1,
-              HDScreenShot2,
+              hexaDominoes1,
+              hexaDominoes2,
+              hexaDominoes3,
             ],
-            youtube: "o1SbL0i7x1M",
             startDate: 2021,
           },
           {
@@ -148,19 +171,6 @@ class App extends Component {
             ],
             youtube: "kRbxADt-gVc",
             startDate: 2019,
-          },
-          {
-            title: "Hexa Dominoes",
-            url: "https://play.google.com/store/apps/details?id=com.moolfa.dominocolor",
-            description: "o    My first published project in google play \n" +
-                "o    Helped in developing level manager and designed new levels\n",
-            thumbnail: hexaDominoes0,
-            images: [
-              hexaDominoes1,
-              hexaDominoes2,
-              hexaDominoes3,
-            ],
-            startDate: 2017,
           },
           {
             title: "Waterfall",
@@ -189,13 +199,15 @@ class App extends Component {
         ephemeralLight:
           {
             title: "Ephemeral Light",
-            description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod" +
-                " tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud" +
-                " exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel" +
-                " eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat " +
-                "nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril" +
-                " delenit augue duis dolore te feugait nulla facilisi.",
-            thumbnail: HDIcon,
+            description: "",
+            des: "Ephemeral Light is an exciting tactical RPG game with a strong focus on storytelling." +
+                " Players can explore cities, talk to people, and make choices that shape the outcome of the game." +
+                " In combat, which happens in turns on hexagonal tile environments, players control one to three heroes" +
+                " with unique abilities inspired by MOBA games. As the story unfolds, players can choose companions," +
+                " upgrade abilities using resources they collect, and influence the game's ending. Ephemeral Light offers" +
+                " a captivating adventure where players can experience strategic battles, immersive narratives," +
+                " and the power to impact the game world.",
+            thumbnail: ELPortrait,
             images: [
               HDScreenShot1,
               HDScreenShot1,
@@ -203,15 +215,17 @@ class App extends Component {
             youtube: "kRbxADt-gVc",
             projects: [
               {
-                title: "Wit, a visual novel tool",
+                title: "Wit, our visual novel tool",
                 url: "https://moolfa.itch.io/playground",
-                description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod" +
-                    " tincidunt ut laoreet dolore magna aliquam erat volu nulla facilisis at vero eros et accumsan et iusto" +
-                    " odio dignissim qui blandit praesent luptatum zzril",
+                description: "One of the key elements in a narrative-driven game is the art of storytelling. " +
+                    "To facilitate the management of branching and complex narratives, I developed a graph-based tool" +
+                    " called Wit within the Unity game engine. Wit provides us with a versatile platform to write dialogues," +
+                    " design scenes, and set triggers or player choices. To get a better understanding of Wit and its capabilities," +
+                    " I invite you to watch the demo reel or read about it here.",
                 youtube: "VEHTnPa6LaU",
               },
               {
-                title: "Mesh Generation",
+                title: "Mirage, our mesh generator tool",
                 url: "https://moolfa.itch.io/playground",
                 description: "o    Personal project which each level is a minimal prototype\n" +
                     "o    Implemented different challenging mechanics such as rope simulation and AI based NPCs\n",
@@ -219,6 +233,20 @@ class App extends Component {
               }
             ],
           },
+        arts: [
+          {
+            title: "Sketches",
+            thumbnail: art3,
+            images: [
+              art3,
+              art5,
+              art1,
+              art2,
+              art0,
+              art4
+            ],
+          },
+        ],
         basic_info: {
           section_name: {
             experience: "My Journey",
@@ -310,10 +338,10 @@ class App extends Component {
         {/*  <div style={{ height: window.innerHeight }}>*/}
         {/*  </div>*/}
         {/*</Parallax>*/}
-        <Parallax bgImage={parallexBackground} strength={500}>
-          <div style={{ height: this.state.windowInnerHeight }}>
-          </div>
-        </Parallax>
+        {/*<Parallax bgImage={parallexBackground} strength={500}>*/}
+        {/*  <div style={{ height: this.state.windowInnerHeight }}>*/}
+        {/*  </div>*/}
+        {/*</Parallax>*/}
         <Sketches
           resumeProjects={this.state.resumeData.arts}
           resumeBasicInfo={this.state.resumeData.basic_info}

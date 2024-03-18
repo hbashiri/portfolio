@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Typical from "react-typical";
-import avatar from "../assets/images/header/Vahid.webp";
+import avatar from "../assets/images/header/Hamid.png";
 
 class Header extends Component {
     titles = [];
@@ -128,7 +128,7 @@ class Header extends Component {
                         >
             <span style={{ fontSize: '2.3vh' }}>
                 Passionate game developer who have over 7 years of experience in software engineering and worked 5 years dedicatedly making games using Unity engine. Thrive on collaborative teamwork and have led small multi-disciplinary teams with different skill levels to deliver polished games. Have experience developing android libraries as well as Unity tools to ease game production and always welcome new challenges and opportunities to learn.
-                Have a look at my technical articles in <a style={{color: "#AE944F"}} href={"https://medium.com/@vbashiri1995"}>Medium</a>.
+                Have a look at my technical articles in <a style={{color: "#F4A261"}} href={"https://medium.com/@vbashiri1995"}>Medium</a>.
             </span>
                         </h3>
                     </div>
