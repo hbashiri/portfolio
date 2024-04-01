@@ -35,7 +35,7 @@ class EphemeralLight extends Component {
                         <div className="foto" onClick={() => detailsModalShow(ephemeralLightDataObject)}>
                             <div >
                                 <img
-                                  src={ephemeralLightDataObject.images[0]}
+                                  src={ephemeralLightDataObject.thumbnail}
                                   alt="projectImages"
                                   style={{width: "100%", aspectRatio: 1, marginBottom: 0, paddingBottom: 0, position: 'relative', objectFit: "contain"}}
                                 />
@@ -49,6 +49,7 @@ class EphemeralLight extends Component {
                 </div>
 
             var projects = this.props.resumeProjects.projects.map(function (projects) {
+                var xx = projects.description
                 return (
                     <div style={{justifyContent: "center", alignItems: "center"}}>
                         <div
@@ -92,7 +93,11 @@ class EphemeralLight extends Component {
                                     }}
                                 >
                                     <span style={{ fontSize: '2vh' }}>
-                                        {projects.description}
+                                        {projects.description.split('\n').map((line, index) => (
+                                            <span key={index}>
+                                                {line}<br />
+                                            </span>
+                                        ))}
                                     </span>
                                 </h3>
                             </div>

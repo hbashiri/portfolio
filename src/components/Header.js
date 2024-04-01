@@ -100,13 +100,13 @@ class Header extends Component {
                             <span style={{ fontSize: '4.0vh' }}>Hamid Bashiri</span>
                         </h1>
                         <h1 style={{ color: "#f4f4f4", fontSize: '4vh', textAlign: 'center'}}>
-                            <a style={{ color: "#f4f4f4", textDecoration: "none"}} href={"mailto:vbashiri1995@gmail.com"}>
+                            <a style={{ color: "#f4f4f4", textDecoration: "none"}} href={"mailto:hvbashiri@gmail.com"}>
                                 <span style={{ margin: 7 }} className="iconify" data-icon="mdi:email" />
                             </a>
-                            <a style={{ color: "#f4f4f4", textDecoration: "none"}} href={"https://www.linkedin.com/in/vbashiri/"}>
+                            <a style={{ color: "#f4f4f4", textDecoration: "none"}} href={"https://www.linkedin.com/in/hbashiri/"}>
                                 <span style={{ margin: 7 }} className="iconify" data-icon="mdi:linkedin" />
                             </a>
-                            <a style={{ color: "#f4f4f4", textDecoration: "none"}} href={"https://www.instagram.com/moolfa/"}>
+                            <a style={{ color: "#f4f4f4", textDecoration: "none"}} href={"https://www.instagram.com/h__bashiri/"}>
                                 <span style={{ margin: 7 }} className="iconify" data-icon="mdi:instagram" />
                             </a>
                         </h1>
@@ -128,7 +128,7 @@ class Header extends Component {
                         >
             <span style={{ fontSize: '2.3vh' }}>
                 Passionate game developer who have over 7 years of experience in software engineering and worked 5 years dedicatedly making games using Unity engine. Thrive on collaborative teamwork and have led small multi-disciplinary teams with different skill levels to deliver polished games. Have experience developing android libraries as well as Unity tools to ease game production and always welcome new challenges and opportunities to learn.
-                Have a look at my technical articles in <a style={{color: "#F4A261"}} href={"https://medium.com/@vbashiri1995"}>Medium</a>.
+                Have a look at my technical articles in <a style={{color: "#F4A261"}} href={"https://medium.com/@hvbashiri"}>Medium</a>.
             </span>
                         </h3>
                     </div>
