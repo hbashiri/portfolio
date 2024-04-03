@@ -252,6 +252,7 @@ class App extends Component {
               },
               {
                 title: "Mirage, our mesh generator tool",
+                youtube: "wizsP7tyWHw",
                 description: "We incorporated mesh generation techniques in two key areas of our project: \n" +
                     "•  We utilized mesh generation to create our object in our exploration world from 2D sprites.\n" +
                     "•  We employed mesh generation to create a path preview system. This feature visually displayed the walking paths for both the player and enemy units.\n"

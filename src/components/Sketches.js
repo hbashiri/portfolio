@@ -71,16 +71,13 @@ class Sketches extends Component {
                 }}
               >
                 <span style={{ fontSize: '2.5vh' }}>
-                  I like designing characters and drawing fan arts as a hobby.
-                  Video games have always been my secret getaway tho.
-                  Online games which I can play with my friends are my favorites.
-                  Also, I like playing indie games when I have considerable free time.
-                  On top of that, I tend to watch movies and series.
-                  When I get bored of all these things,
-                  listening to rock/metal music and playing sports like futsal and ping pong is the way to go.
+                  In my free time, I sketch, play guitar, and play games. I like indie games especially when they tell stories and online multiplier games that I could play with my friends. I like to learn anything related to creating a game so currently I’m learning 3D modeling with Blender.<br/>
+                  I enjoy watching movies across various genres and formats, but my true passion lies in anime. I also read fantasy and science fiction novels. If you happen to be familiar with the First Law series or if your favorite anime includes "Howl's Moving Castle" or "Princess Mononoke," I would be delighted to engage in a conversation about them. <br/>
+                  In the end, I created this portfolio with love, passion, and of course React Native. If you have an Idea to improve it or there is a problem, please tell me to make it better.
+
                 </span>
                 <p style={{ fontSize: '2.5vh' }}>
-                  Here is some of my sketches.
+                  Here are some of my sketches.
                 </p>
               </h3>
             </div>
