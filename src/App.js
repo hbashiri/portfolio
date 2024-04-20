@@ -180,6 +180,7 @@ class App extends Component {
             description: "•    Designed and developed the game \n" +
                 "•    Led a multi-disciplinary team to produce the game\n",
             thumbnail: HDIcon,
+            youtube: "SWChghYIsMM",
             images: [
               HDScreenShot1,
               HDScreenShot2,
