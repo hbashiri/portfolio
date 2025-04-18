@@ -20,6 +20,8 @@ import moolfa from "./assets/images/experience/moolfa.png"
 import iust from "./assets/images/experience/iust.png";
 import noopArmyLogo from "./assets/images/experience/noopArmyLogo.png";
 import PaeezanLogo from "./assets/images/experience/PaeezanLogo.png";
+import WilliwawLogo from "./assets/images/experience/Williwaw.png";
+import BCGLogo from "./assets/images/experience/BCG.png";
 
 import playground0 from "./assets/images/projects/playground/playground_icon.jpg";
 import playground1 from "./assets/images/projects/playground/mushroom.png";
@@ -73,6 +75,7 @@ import EL5 from "./assets/images/projects/ephemeralLight/5.png"
 import EL6 from "./assets/images/projects/ephemeralLight/6.png"
 import EL7 from "./assets/images/projects/ephemeralLight/7.png"
 import EL8 from "./assets/images/projects/ephemeralLight/8.png"
+import AnotherPint from "./components/AnotherPint";
 
 class App extends Component {
 
@@ -84,15 +87,31 @@ class App extends Component {
       resumeData: {
         experience: [
           {
-            technologies:["Ephemeral Light"],
+            technologies:["Project: Another Pint"],
+            mainTech: ["Unity", "C#", "UI Toolkit", "HLSL"],
+            years: "2024.6 - present",
+            title: "Lead Game Developer",
+            company: "Williwaw Games",
+            companyIcon: WilliwawLogo,
+          },
+          {
+            technologies:["Project: street mayhem"],
+            mainTech: ["Unity", "C#", "WebGL"],
+            years: "2024.4 - 2024.6",
+            title: "Game Developer",
+            company: "Black Cube Games",
+            companyIcon: BCGLogo,
+          },
+          {
+            technologies:["Project: Ephemeral Light"],
             mainTech: ["Unity", "C#", "UI Toolkit", "MVP"],
-            years: "2022.5 - present",
+            years: "2022.5 - 2024.3",
             title: "Game Developer",
             company: "Paeezan Studio",
             companyIcon: PaeezanLogo,
           },
           {
-            technologies:["Enlightenment"],
+            technologies:["Project: Enlightenment"],
             mainTech: ["Unity", "C#", "DOTS", "UI Toolkit"],
             years: "2021.4 - 2021.10",
             title: "Game Developer",
@@ -116,7 +135,7 @@ class App extends Component {
               companyIcon: utLogo,
           },
           {
-              technologies: ["Hexa Dominoes, Waterfall"],
+              technologies: ["Projects: Hexa Dominoes, Waterfall"],
               mainTech: ["Unity", "C#"],
               years: "2015.9 - 2017.10",
               title: "Freelance Game Developer",
@@ -219,6 +238,42 @@ class App extends Component {
             startDate: 2016,
           },
         ],
+        AnotherPint:
+            {
+              title: "Another Pint",
+              description: "",
+              des: "",
+              thumbnail: ELLandscape,
+              youtube: "MsRqJJk6IPA",
+              images: [
+                EL1,
+                EL2,
+                EL3,
+                EL4,
+                EL5,
+                EL6,
+                EL7,
+                EL8,
+              ],
+              projects: [
+                {
+                  title: "Wit, our visual novel tool",
+                  description: "One of the key elements in a narrative-driven game is the art of storytelling. " +
+                      "To facilitate the management of branching and complex narratives, I developed a graph-based tool" +
+                      " called Wit within the Unity game engine. Wit provides us with a versatile platform to write dialogues," +
+                      " design scenes, and set triggers or player choices. To get a better understanding of Wit and its capabilities," +
+                      " I invite you to watch the demo reel or read about it in my Medium .",
+                  youtube: "VEHTnPa6LaU",
+                },
+                {
+                  title: "Mirage, our mesh generator tool",
+                  youtube: "wizsP7tyWHw",
+                  description: "We incorporated mesh generation techniques in two key areas of our project: \n" +
+                      "•  We utilized mesh generation to create our object in our exploration world from 2D sprites.\n" +
+                      "•  We employed mesh generation to create a path preview system. This feature visually displayed the walking paths for both the player and enemy units.\n"
+                }
+              ],
+            },
         ephemeralLight:
           {
             title: "Ephemeral Light",
@@ -347,6 +402,10 @@ class App extends Component {
         <Experience
           resumeExperience={this.state.resumeData.experience}
           resumeBasicInfo={this.state.resumeData.basic_info}
+        />
+        <AnotherPint
+            resumeProjects={this.state.resumeData.AnotherPint}
+            resumeBasicInfo={this.state.resumeData.basic_info}
         />
         <EphemeralLight
             resumeProjects={this.state.resumeData.ephemeralLight}
