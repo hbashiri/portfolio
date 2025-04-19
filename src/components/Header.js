@@ -97,7 +97,7 @@ class Header extends Component {
                             }}
                         />
                         <h1 style={{ color: "#f4f4f4", marginBottom: 7, textAlign: 'center' }}>
-                            <span style={{ fontSize: '4.0vh' }}>Hamid Bashiri</span>
+                            <span style={{ fontSize: '4.0vh' }}>Hamid (Rennd) Bashiri</span>
                         </h1>
                         <h1 style={{ color: "#f4f4f4", fontSize: '4vh', textAlign: 'center'}}>
                             <a style={{ color: "#f4f4f4", textDecoration: "none"}} href={"mailto:hvbashiri@gmail.com"}>

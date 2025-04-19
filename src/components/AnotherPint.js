@@ -23,7 +23,7 @@ class AnotherPint extends Component {
 
         let detailsModalClose = () => this.setState({ detailsModalShow: false });
         if (this.props.resumeProjects && this.props.resumeBasicInfo) {
-            var sectionName = this.props.resumeBasicInfo.section_name.ephemeralLight;
+            var sectionName = this.props.resumeBasicInfo.section_name.anotherPint;
             var ephemeralLightDataObject = this.props.resumeProjects;
             var mainImage =
                 <div
@@ -108,7 +108,7 @@ class AnotherPint extends Component {
             });
         }
         return (
-            <section id="ephemeralLightSection" style={{}}>
+            <section id="anotherPintSection" style={{}}>
                 <div className="col-md-12 col-xl-12 col-lg-12">
                     <h1 className="section-title" style={{ color: "#f4f4f4", fontSize: "300%" }}>
                         <span>{sectionName}</span>
@@ -159,4 +159,4 @@ class AnotherPint extends Component {
     }
 }
 
-export default EphemeralLight;
+export default AnotherPint

@@ -5,6 +5,8 @@
 $--backGround-color: #264653;
 $--textTitle-color: #fcbf49;
 $--textContent-color: #eae2b7;
+$--thirdBackground-color: #9395D3;
+$--forthBackground-color: #815F7E;
 $--secondBackground-color: #90c6b3;
 $--highlight-color: #e76f51;
 $--highlight2-color: #2a9d8f;
@@ -411,6 +413,11 @@ header h1 {
 
 #ephemeralLightSection {
 	background: $--backGround-color;
+	padding-bottom: 5%;
+}
+
+#anotherPintSection {
+	background: $--forthBackground-color;
 	padding-bottom: 5%;
 }
 

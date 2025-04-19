@@ -75,7 +75,9 @@ import EL5 from "./assets/images/projects/ephemeralLight/5.png"
 import EL6 from "./assets/images/projects/ephemeralLight/6.png"
 import EL7 from "./assets/images/projects/ephemeralLight/7.png"
 import EL8 from "./assets/images/projects/ephemeralLight/8.png"
+
 import AnotherPint from "./components/AnotherPint";
+import AP_Banner from "./assets/images/projects/anotherPint/banner.jpg"
 
 class App extends Component {
 
@@ -238,40 +240,33 @@ class App extends Component {
             startDate: 2016,
           },
         ],
-        AnotherPint:
+        anotherPint:
             {
               title: "Another Pint",
               description: "",
-              des: "",
-              thumbnail: ELLandscape,
+              des: "Another Pint is a dynamic management game where you get to build and run your own medieval tavern" +
+                  " Tasked with taking over a barebones shack, where you take it is up to you.",
+              thumbnail: AP_Banner,
               youtube: "MsRqJJk6IPA",
               images: [
-                EL1,
-                EL2,
-                EL3,
-                EL4,
-                EL5,
-                EL6,
-                EL7,
-                EL8,
               ],
               projects: [
-                {
-                  title: "Wit, our visual novel tool",
-                  description: "One of the key elements in a narrative-driven game is the art of storytelling. " +
-                      "To facilitate the management of branching and complex narratives, I developed a graph-based tool" +
-                      " called Wit within the Unity game engine. Wit provides us with a versatile platform to write dialogues," +
-                      " design scenes, and set triggers or player choices. To get a better understanding of Wit and its capabilities," +
-                      " I invite you to watch the demo reel or read about it in my Medium .",
-                  youtube: "VEHTnPa6LaU",
-                },
-                {
-                  title: "Mirage, our mesh generator tool",
-                  youtube: "wizsP7tyWHw",
-                  description: "We incorporated mesh generation techniques in two key areas of our project: \n" +
-                      "•  We utilized mesh generation to create our object in our exploration world from 2D sprites.\n" +
-                      "•  We employed mesh generation to create a path preview system. This feature visually displayed the walking paths for both the player and enemy units.\n"
-                }
+                // {
+                //   title: "Wit, our visual novel tool",
+                //   description: "One of the key elements in a narrative-driven game is the art of storytelling. " +
+                //       "To facilitate the management of branching and complex narratives, I developed a graph-based tool" +
+                //       " called Wit within the Unity game engine. Wit provides us with a versatile platform to write dialogues," +
+                //       " design scenes, and set triggers or player choices. To get a better understanding of Wit and its capabilities," +
+                //       " I invite you to watch the demo reel or read about it in my Medium .",
+                //   youtube: "VEHTnPa6LaU",
+                // },
+                // {
+                //   title: "Mirage, our mesh generator tool",
+                //   youtube: "wizsP7tyWHw",
+                //   description: "We incorporated mesh generation techniques in two key areas of our project: \n" +
+                //       "•  We utilized mesh generation to create our object in our exploration world from 2D sprites.\n" +
+                //       "•  We employed mesh generation to create a path preview system. This feature visually displayed the walking paths for both the player and enemy units.\n"
+                // }
               ],
             },
         ephemeralLight:
@@ -332,6 +327,7 @@ class App extends Component {
         basic_info: {
           section_name: {
             experience: "My Journey",
+            anotherPint: "Another Pint",
             ephemeralLight: "Ephemeral Light",
             enlightenment: "Enlightenment",
             hexaDominoes: "Hexa Dominoes",
@@ -404,7 +400,7 @@ class App extends Component {
           resumeBasicInfo={this.state.resumeData.basic_info}
         />
         <AnotherPint
-            resumeProjects={this.state.resumeData.AnotherPint}
+            resumeProjects={this.state.resumeData.anotherPint}
             resumeBasicInfo={this.state.resumeData.basic_info}
         />
         <EphemeralLight
