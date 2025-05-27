@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../css/Banner.css";
-import Typical from "react-typical";
-import Switch from "react-switch";
+// import Typical from "react-typical";
+// import Switch from "react-switch";
 
 import sky from '../assets/images/banner/sky.gif'
 import forground from '../assets/images/banner/rebel_forground.gif'
