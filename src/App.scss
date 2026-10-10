@@ -1,6 +1,4 @@
-@import '../src/scss/themes/theme-dark.scss';
-@import '../src/scss/themes/theme-light.scss';
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;600;700&display=swap');
 
 $--backGround-color: #264653;
 $--textTitle-color: #fcbf49;
@@ -81,19 +79,6 @@ header h1 {
 	width: 100%;
 }
 
-.slider-image {
-	height: 50px;
-}
-
-.slider-tab {
-	background-color: #D7CAAA;
-	height: 25px;
-}
-
-.slider-iconfiy {
-	margin-top: 10px;
-}
-
 .styles_typicalWrapper__1_Uvh::after {
 	cursor: none !important;
 	display: none;
@@ -111,10 +96,6 @@ header h1 {
 	letter-spacing: 3px;
 	color: black;
 	text-align: center;
-}
-
-.link-href {
-	color: black;
 }
 
 .wave {
@@ -248,10 +229,6 @@ $--card-accent-color: #e9c46a;
 	}
 }
 
-.modal-inside .modal-content {
-	background: white;
-}
-
 .bars {
 	width: 95%;
 	float: left;
@@ -293,32 +270,6 @@ $--card-accent-color: #e9c46a;
 	height: 42px;
 	line-height: 42px;
 	border-radius: 3px 0 0 3px;
-}
-
-.modal-close {
-	text-align: right;
-	padding: 10px 15px 10px 15px;
-	cursor: pointer;
-}
-
-.close-icon {
-	color: black;
-	font-weight: lighter !important;
-}
-
-.modal-description {
-	text-align: justify;
-	padding: 5px 5px 10px 10px;
-	margin-bottom: 20px;
-	font-size: small;
-}
-
-.awssld__next {
-	outline: none !important;
-}
-
-.awssld__prev {
-	outline: none !important;
 }
 
 .loader-bar-color {
@@ -865,4 +816,242 @@ footer a:focus {
 .social-links {
 	margin-top: 50px;
 	font-size: 22px;
+}
+
+/* Gallery popup (ProjectDetailsModal) */
+.gallery-modal .modal-content {
+	background: $--card-color;
+	color: $--card-text-color;
+	border: 0;
+	border-radius: 14px;
+	overflow: hidden;
+	box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+
+	// Keep sections at their natural height so a fullscreen (phone) modal scrolls instead of squashing them.
+	> * {
+		flex-shrink: 0;
+	}
+}
+
+.modal-backdrop.show {
+	opacity: 0.8;
+}
+
+// The "view source" ribbon in index.html sits at z-index 9999; hide it behind open popups.
+.modal-open .github-corner {
+	display: none;
+}
+
+.gallery-stage {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: min(62vh, 620px);
+	background: #0f2129;
+	user-select: none;
+}
+
+.gallery-image {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
+
+.gallery-video {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.gallery-nav,
+.gallery-close {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	padding: 0;
+	border: 0;
+	border-radius: 50%;
+	background: rgba(15, 33, 41, 0.75);
+	color: $--card-text-color;
+	font-size: 1.6rem;
+	cursor: pointer;
+	transition: background 0.2s ease, color 0.2s ease;
+
+	&:hover,
+	&:focus-visible {
+		background: $--card-accent-color;
+		color: $--card-color;
+		outline: none;
+	}
+}
+
+.gallery-nav {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.gallery-nav-prev {
+	left: 16px;
+}
+
+.gallery-nav-next {
+	right: 16px;
+}
+
+.gallery-close {
+	top: 14px;
+	right: 14px;
+	z-index: 2;
+}
+
+.gallery-counter {
+	flex: 0 0 auto;
+	align-self: center;
+	margin-left: auto;
+	padding-left: 1.2rem;
+	font-size: 1.3rem;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	color: $--card-muted-color;
+}
+
+.gallery-thumbs {
+	display: flex;
+	gap: 0.8rem;
+	padding: 1.2rem 1.6rem;
+	overflow-x: auto;
+	background: rgba(15, 33, 41, 0.6);
+	scrollbar-width: thin;
+}
+
+.gallery-thumb {
+	position: relative;
+	flex: 0 0 64px;
+	height: 64px;
+	padding: 0;
+	border: 2px solid transparent;
+	border-radius: 8px;
+	overflow: hidden;
+	background: #0f2129;
+	opacity: 0.55;
+	cursor: pointer;
+	transition: opacity 0.2s ease, border-color 0.2s ease;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&:hover,
+	&:focus-visible {
+		opacity: 0.9;
+		outline: none;
+	}
+
+	&.active {
+		opacity: 1;
+		border-color: $--card-accent-color;
+	}
+}
+
+.gallery-thumb-play {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.35);
+	color: $--card-accent-color;
+	font-size: 1.4rem;
+}
+
+.gallery-info {
+	padding: 2.4rem 2.8rem 2.8rem;
+	text-align: left;
+}
+
+.gallery-info-header {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 1.6rem;
+	flex-wrap: wrap;
+}
+
+.gallery-title {
+	margin: 0.6rem 0 0;
+	font-family: 'Raleway', sans-serif;
+	font-size: clamp(2.2rem, 2.6vmin, 2.8rem);
+	font-weight: 700;
+	color: $--card-text-color;
+}
+
+.gallery-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.6rem;
+	padding: 0.8rem 1.6rem;
+	border-radius: 999px;
+	background: $--card-accent-color;
+	color: $--card-color;
+	font-size: 1.4rem;
+	font-weight: 700;
+	text-decoration: none;
+	transition: filter 0.2s ease;
+
+	&:hover {
+		color: $--card-color;
+		filter: brightness(1.08);
+	}
+}
+
+.gallery-description {
+	max-width: 72ch;
+	margin-top: 1.6rem;
+	font-size: 1.5rem;
+	line-height: 1.75;
+	color: rgba(244, 241, 222, 0.85);
+
+	p {
+		margin: 0 0 0.8rem;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.gallery-modal .modal-content {
+		border-radius: 0;
+		overflow-y: auto;
+	}
+
+	.gallery-stage {
+		flex: 0 0 auto;
+		height: 52vh;
+	}
+
+	.gallery-nav {
+		width: 38px;
+		height: 38px;
+	}
+
+	.gallery-nav-prev {
+		left: 8px;
+	}
+
+	.gallery-nav-next {
+		right: 8px;
+	}
+
+	.gallery-info {
+		padding: 2rem 1.6rem 2.4rem;
+	}
 }

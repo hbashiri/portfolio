@@ -10,10 +10,8 @@
     "bootstrap": "^5.3.1",
     "jquery": "^3.7.1",
     "react": "^19.1.0",
-    "react-awesome-slider": "^4.1.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^19.1.0",
-    "react-parallax": "^3.5.1",
     "react-scripts": "^5.0.1",
     "react-switch": "^7.0.0",
     "react-vertical-timeline-component": "^3.5.3",
@@ -43,8 +41,6 @@
     ]
   },
   "devDependencies": {
-    "@iconify/icons-logos": "^1.2.35",
-    "@iconify/react": "^6.0.0",
     "gh-pages": "^6.0.0",
     "npm-force-resolutions": "^0.0.10"
   },
@@ -53,9 +49,9 @@
     "react-dom": "19.1.0"
   },
   "overrides": {
-  "react-vertical-timeline-component": {
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
-  }
+    "react-vertical-timeline-component": {
+      "react": "19.1.0",
+      "react-dom": "19.1.0"
+    }
   }
 }

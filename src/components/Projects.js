@@ -1,12 +1,6 @@
 import React, { Component } from "react";
 import ProjectDetailsModal from "./ProjectDetailsModal";
-
-// Store name shown on the card's external link, derived from the project URL.
-function storeName(url) {
-  if (url.includes("play.google.com")) return "Google Play";
-  if (url.includes("itch.io")) return "itch.io";
-  return "Visit";
-}
+import { storeName } from "../utils/storeName";
 
 // Descriptions are written as lines (some starting with "•" or "o" bullets); flatten them for the card preview.
 function summary(description) {
@@ -91,7 +85,6 @@ class Projects extends Component {
           show={this.state.detailsModalShow}
           onHide={detailsModalClose}
           data={this.state.deps}
-          desc
         />
       </section>
     );
