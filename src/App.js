@@ -347,7 +347,8 @@ class App extends Component {
 
   loadSharedData() {
     $.ajax({
-      url: `portfolio_shared_data.json`,
+      // Absolute path (PUBLIC_URL comes from "homepage") so it resolves with or without a trailing slash.
+      url: `${process.env.PUBLIC_URL}/portfolio_shared_data.json`,
       dataType: "json",
       cache: false,
       success: function (data) {

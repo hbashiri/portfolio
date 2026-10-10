@@ -63,9 +63,11 @@ class ProjectDetailsModal extends Component {
         });
       }
     }
+    // Only Modal's own props go through; data/desc/selected are for this component.
+    const { data, desc, selected, ...modalProps } = this.props;
     return (
       <Modal
-        {...this.props}
+        {...modalProps}
         size={"lg"}
         fullscreen={"md-down"}
         aria-labelledby="contained-modal-title-vcenter"
@@ -80,6 +82,7 @@ class ProjectDetailsModal extends Component {
             <AwesomeSlider
               cssModule={[AwesomeSliderStyles, AwesomeSliderStyles2]}
               animation="scaleOutAnimation"
+              selected={this.props.selected || 0}
               className="slider-image"
               style={{ height: "100%", width: "100%" }}
             >

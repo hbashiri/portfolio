@@ -40,6 +40,7 @@ Banner height comes from `src/utils/bannerHeight.js` (`calculateBannerHeight`), 
 ## Styling
 
 - `src/App.scss` — main stylesheet. Palette is defined as SCSS variables at the top (`$--backGround-color`, `$--secondBackground-color`, `$--forthBackground-color`, etc.); each section's background is set by its id (`#resume`, `#portfolio`, `#sketches`, `#ephemeralLightSection`, `#anotherPintSection`).
+- The redesigned sections (journey timeline, featured projects, personal projects grid, life interests) share the `$--card-*` variables (dark teal card, cream text, sage muted text, gold accent) defined above the "Journey timeline cards" block, and use `rem` (1rem = 10px because `html` is 62.5%) with `clamp()` for type.
 - Many colors, font sizes (often `vh`/`vmin`), and layouts are inline styles inside components, so check the component as well as the SCSS.
 - `src/scss/` holds slider themes; `theme-dark.scss` is empty. A light/dark toggle via `body[data-theme]` exists in `Header` but isn't wired to any UI.
 
