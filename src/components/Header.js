@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-// import Typical from "react-typical";
 import avatar from "../assets/images/header/Hamid.png";
+import { calculateBannerHeight } from "../utils/bannerHeight";
 
 class Header extends Component {
     titles = [];
@@ -12,16 +12,21 @@ class Header extends Component {
     }
 
     componentDidMount() {
-        this.calculateBannerHeight(window.innerHeight, window.innerWidth);
-
-        window.addEventListener("orientationchange", () => {
-            this.calculateBannerHeight(window.innerWidth, window.innerHeight);
-        })
+        this.updateLayout(window.innerHeight, window.innerWidth);
+        window.addEventListener("orientationchange", this.onOrientationChange);
     }
 
-    calculateBannerHeight(height, width) {
-        var bannerHeight = height < width ? height > 900 ? 480:  height / 3 : width / 2;
-        bannerHeight = bannerHeight > 300 ? bannerHeight : 300;
+    componentWillUnmount() {
+        window.removeEventListener("orientationchange", this.onOrientationChange);
+    }
+
+    // Dimensions are still pre-rotation when this fires, so they are passed swapped.
+    onOrientationChange = () => {
+        this.updateLayout(window.innerWidth, window.innerHeight);
+    };
+
+    updateLayout(height, width) {
+        var bannerHeight = calculateBannerHeight(height, width);
         var mobileVersion = (bannerHeight <= 300 && width < 1500) || ((width < (height + 100) * 3 / 4) && width < 1500);
         this.setState({windowInnerHeight: height, bannerSize: bannerHeight, mobileVersion});
     }

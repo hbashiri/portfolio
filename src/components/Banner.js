@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "../css/Banner.css";
-// import Typical from "react-typical";
-// import Switch from "react-switch";
+import { calculateBannerHeight } from "../utils/bannerHeight";
 
 import sky from '../assets/images/banner/sky.gif'
 import forground from '../assets/images/banner/rebel_forground.gif'
@@ -20,19 +19,20 @@ class Banner extends Component {
     }
 
     componentDidMount() {
-        this.calculateBannerHeight(window.innerHeight, window.innerWidth);
-        window.addEventListener("orientationchange", () => {
-            this.calculateBannerHeight(window.innerWidth, window.innerHeight);
-        })
+        this.setState({bannerSize: calculateBannerHeight(window.innerHeight, window.innerWidth)});
+        window.addEventListener("orientationchange", this.onOrientationChange);
     }
 
-    calculateBannerHeight(height, width) {
-        var bannerHeight = height < width ? height > 900 ? 480:  height / 3 : width / 2;
-        bannerHeight = bannerHeight > 300 ? bannerHeight : 300;
-        this.setState({bannerSize: bannerHeight});
+    componentWillUnmount() {
+        window.removeEventListener("orientationchange", this.onOrientationChange);
     }
+
+    // Dimensions are still pre-rotation when this fires, so they are passed swapped.
+    onOrientationChange = () => {
+        this.setState({bannerSize: calculateBannerHeight(window.innerWidth, window.innerHeight)});
+    };
+
   render() {
-        console.log("$%$%$%%%%%%%%%%%%%$%$%");
     return (
       <div id="banner" style={{
         height: this.state.bannerSize,

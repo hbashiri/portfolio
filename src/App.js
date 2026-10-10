@@ -1,15 +1,11 @@
 import React, { Component } from "react";
 import $ from "jquery";
-import { Parallax, Background } from "react-parallax";
 import "./App.scss";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
-import HexaDominoes from "./components/HexaDominoes";
-import EphemeralLight from "./components/EphemeralLight";
-import Skills from "./components/Skills";
+import FeaturedProject from "./components/FeaturedProject";
 import Banner from "./components/Banner";
 import Sketches from "./components/Sketches";
 
@@ -63,8 +59,6 @@ import BRShop from "./assets/images/projects/bridgeRun/shop.png";
 import BRVictoryPanel from "./assets/images/projects/bridgeRun/victoryPanel.png";
 import BRStartPage from "./assets/images/projects/bridgeRun/startPage.png";
 
-import parallexBackground from "./assets/images/arts/DominoColorBanner.png";
-
 import ELPortrait from "./assets/images/projects/ephemeralLight/Portrait.jpg"
 import ELLandscape from "./assets/images/projects/ephemeralLight/Landscap.jpg"
 import EL1 from "./assets/images/projects/ephemeralLight/1.png"
@@ -76,7 +70,6 @@ import EL6 from "./assets/images/projects/ephemeralLight/6.png"
 import EL7 from "./assets/images/projects/ephemeralLight/7.png"
 import EL8 from "./assets/images/projects/ephemeralLight/8.png"
 
-import AnotherPint from "./components/AnotherPint";
 import AP_Banner from "./assets/images/projects/anotherPint/banner.jpg"
 
 class App extends Component {
@@ -85,7 +78,6 @@ class App extends Component {
     super();
     this.state = {
       windowInnerHeight: window.innerHeight,
-      foo: "bar",
       resumeData: {
         experience: [
           {
@@ -329,8 +321,6 @@ class App extends Component {
             experience: "My Journey",
             anotherPint: "Another Pint",
             ephemeralLight: "Ephemeral Light",
-            enlightenment: "Enlightenment",
-            hexaDominoes: "Hexa Dominoes",
             projects: "Personal Projects",
             sketches: "Life Interests"
           }
@@ -343,33 +333,17 @@ class App extends Component {
 
   componentDidMount() {
     this.loadSharedData();
-    this.calculateBannerHeight(window.innerHeight, window.innerWidth);
-
-    window.addEventListener("orientationchange", () => {
-      this.calculateBannerHeight(window.innerWidth, window.innerHeight);
-    })
+    window.addEventListener("orientationchange", this.onOrientationChange);
   }
 
-  calculateBannerHeight(height, width) {
-    var bannerHeight = height < width ? height > 900 ? 480:  height / 3 : width / 2;
-    bannerHeight = bannerHeight > 300 ? bannerHeight : 300;
-    var mobileVersion = bannerHeight <= 300 || navigator.platform.indexOf('MacIntel') !== -1;
-    this.setState({windowInnerHeight: height, bannerSize: bannerHeight, mobileVersion});
+  componentWillUnmount() {
+    window.removeEventListener("orientationchange", this.onOrientationChange);
   }
 
-  loadResumeFromPath(path) {
-    $.ajax({
-      url: path,
-      dataType: "json",
-      cache: false,
-      success: function (data) {
-        this.setState({ resumeData: data });
-      }.bind(this),
-      error: function (xhr, status, err) {
-        alert(err);
-      },
-    });
-  }
+  // window.innerWidth still holds the pre-rotation width here, which becomes the new height.
+  onOrientationChange = () => {
+    this.setState({ windowInnerHeight: window.innerWidth });
+  };
 
   loadSharedData() {
     $.ajax({
@@ -399,31 +373,20 @@ class App extends Component {
           resumeExperience={this.state.resumeData.experience}
           resumeBasicInfo={this.state.resumeData.basic_info}
         />
-        <AnotherPint
-            resumeProjects={this.state.resumeData.anotherPint}
-            resumeBasicInfo={this.state.resumeData.basic_info}
+        <FeaturedProject
+            sectionId="anotherPintSection"
+            sectionName={this.state.resumeData.basic_info.section_name.anotherPint}
+            project={this.state.resumeData.anotherPint}
         />
-        <EphemeralLight
-            resumeProjects={this.state.resumeData.ephemeralLight}
-            resumeBasicInfo={this.state.resumeData.basic_info}
-          />
-        {/*<HexaDominoes*/}
-        {/*    resumeProjects={this.state.resumeData.dominoes}*/}
-        {/*    resumeBasicInfo={this.state.resumeData.basic_info}*/}
-        {/*/>*/}
+        <FeaturedProject
+            sectionId="ephemeralLightSection"
+            sectionName={this.state.resumeData.basic_info.section_name.ephemeralLight}
+            project={this.state.resumeData.ephemeralLight}
+        />
         <Projects
           resumeProjects={this.state.resumeData.projects}
           resumeBasicInfo={this.state.resumeData.basic_info}
         />
-
-        {/*<Parallax bgImage={parallexBackground} strength={500}>*/}
-        {/*  <div style={{ height: window.innerHeight }}>*/}
-        {/*  </div>*/}
-        {/*</Parallax>*/}
-        {/*<Parallax bgImage={parallexBackground} strength={500}>*/}
-        {/*  <div style={{ height: this.state.windowInnerHeight }}>*/}
-        {/*  </div>*/}
-        {/*</Parallax>*/}
         <Sketches
           resumeProjects={this.state.resumeData.arts}
           resumeBasicInfo={this.state.resumeData.basic_info}

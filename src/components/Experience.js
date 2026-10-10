@@ -4,7 +4,6 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import Badge from "react-bootstrap/Badge";
 
 class Experience extends Component {
   render() {
@@ -12,74 +11,24 @@ class Experience extends Component {
       var sectionName = this.props.resumeBasicInfo.section_name.experience;
       var work = this.props.resumeExperience.map(function (work, i)
       {
-        const technologies = work.technologies;
-        const mainTechnologies = work.mainTech;
-
-        var mainTech = mainTechnologies.map((technology, i) => {
-          return (
-            <Badge
-              pill
-              bg={"#AE944F"}
-              className=" main-badge
-              mt-xl-2 mt-md-2 mt-sm-2
-              mr-xl-4 mr-md-3 mr-sm-2
-              mb-xl-4 mb-md-3 mb-sm-2"
-              key={i}
-            >
-              {technology}
-            </Badge>
-          );
-        });
-        var tech = technologies.map((technology, i) => {
-          return (
-            <Badge
-              pill
-              classNam
-              bg={"#f9f5e9"}
-              color={"#EAE2B7"}
-              className="experience-badge
-              mt-xl-4 mt-md-3 mt-sm-2
-              mr-xl-4 mr-md-3 mr-sm-2
-              mb-xl-2 mb-md-2 mb-sm-2"
-              key={i}
-            >
-              {technology}
-            </Badge>
-          );
-        });
+        var mainTech = work.mainTech.map((technology, i) => (
+          <span className="journey-tag" key={i}>{technology}</span>
+        ));
+        var details = (work.technologies || []).map((detail, i) => (
+          <div key={i}>{detail}</div>
+        ));
         return (
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ paddingLeft: "20px" , background: "#e2dcbf",
-              color: "#000000" }}
-            contentArrowStyle={{borderRightColor: "#e2dcbf"}}
+            className="vertical-timeline-element-work"
             dateClassName="element-date"
             date={work.years}
-            iconStyle={{
-              background: "#e2dcbf",
-              color: "#ffffff",
-              textAlign: "center",
-            }}
-            icon={<img src={work.companyIcon} style={{ maxWidth: '100%', maxHeight: '100%', padding: 5 }} />}
+            icon={<img src={work.companyIcon} alt={work.company} style={{ width: '100%', height: '100%', objectFit: 'contain', padding: 5 }} />}
             key={i}
           >
-            <div style={{ textAlign: "left", marginBottom: "4px" }}>
-              {mainTech}
-            </div>
-
-            <h1
-              className="vertical-timeline-element-title"
-              style={{ textAlign: "left", fontSize: "2.8vmin" }}
-            >
-              {work.title}
-            </h1>
-            <h4
-              className="vertical-timeline-element-subtitle"
-              style={{ textAlign: "left", fontSize: "1.6vmin", marginLeft: "5px" }}
-            >
-              {work.company}
-            </h4>
-            <div style={{ textAlign: "left", marginTop: "15px" }}>{tech}</div>
+            <h3 className="journey-title">{work.title}</h3>
+            <h4 className="journey-company">{work.company}</h4>
+            <div className="journey-tags">{mainTech}</div>
+            {details.length > 0 && <div className="journey-details">{details}</div>}
           </VerticalTimelineElement>
         );
       });
@@ -98,13 +47,14 @@ class Experience extends Component {
         </div>
         <div className="col-md-8 mx-auto">
           <VerticalTimeline
-              lineColor= 'black'
+              lineColor= '#1d3a45'
           >
             {work}
             <VerticalTimelineElement
               iconStyle={{
-                background: "#2A9D8F",
-                color: "#fff",
+                background: "#1d3a45",
+                color: "#e9c46a",
+                boxShadow: "0 0 0 4px #e9c46a",
                 textAlign: "center",
               }}
               icon={

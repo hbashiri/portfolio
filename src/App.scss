@@ -275,40 +275,91 @@ header h1 {
 	width: 100%
 }
 
-.main-badge {
-	font-size: 2vmin !important;
-	text-align: left !important;
-	padding: 0.7vmin 1.2vmin 0.7vmin 1.2vmin !important;
-	vertical-align: baseline;
-	background-color: $--highlight-color !important;
-	color: white;
-	font-weight: lighter !important;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.experience-badge {
-	font-size: 1.6vmin !important;
-	text-align: left !important;
-	padding: 0.7vmin 1.2vmin 0.7vmin 1.2vmin !important;
-	vertical-align: baseline;
-	background-color: $--highlight2-color !important;
-	color:  white;
-	font-weight: lighter !important;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
+/* Journey timeline cards */
+$--card-color: #1d3a45;
+$--card-text-color: #f4f1de;
+$--card-muted-color: #a8c5c0;
+$--card-accent-color: #e9c46a;
 
 .vertical-timeline {
 	max-width: 98% !important;
 }
 
-.vertical-timeline-element-date {
-	padding: 0 !important;
-	margin: 0 !important;
-	font-size: 80px;
+.vertical-timeline-element-work .vertical-timeline-element-content {
+	background: $--card-color;
+	color: $--card-text-color;
+	border-top: 4px solid $--card-accent-color;
+	border-radius: 10px;
+	box-shadow: 0 8px 24px rgba(17, 38, 46, 0.25);
+	padding: 1.4em 1.6em;
+	text-align: left;
 }
 
-.element-date {
-	font-size: 1.5vmin !important;
+.vertical-timeline-element-work .vertical-timeline-element-content-arrow {
+	border-right-color: $--card-color;
+}
+
+.vertical-timeline-element-work .vertical-timeline-element-icon {
+	background: #dfe9e4;
+	box-shadow: 0 0 0 4px $--card-color, 0 4px 10px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+}
+
+.journey-title {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: clamp(1.8rem, 2.4vmin, 2.6rem);
+	line-height: 1.25;
+	color: $--card-text-color;
+	margin: 0;
+}
+
+.journey-company {
+	font-size: clamp(1.4rem, 1.7vmin, 1.9rem);
+	font-weight: 600;
+	color: $--card-accent-color;
+	margin: 0.3em 0 0.9em;
+}
+
+.journey-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+}
+
+.journey-tag {
+	display: inline-block;
+	font-size: clamp(1.2rem, 1.4vmin, 1.5rem);
+	line-height: 1;
+	padding: 0.45em 0.9em;
+	border-radius: 999px;
+	background: rgba(42, 157, 143, 0.25);
+	border: 1px solid rgba(42, 157, 143, 0.7);
+	color: $--card-text-color;
+}
+
+.journey-details {
+	margin-top: 0.9em;
+	padding-top: 0.8em;
+	border-top: 1px solid rgba(244, 241, 222, 0.15);
+	font-size: clamp(1.3rem, 1.5vmin, 1.6rem);
+	color: $--card-muted-color;
+}
+
+/* Below 1170px the date sits inside the (dark) card; above it, on the section background. */
+.vertical-timeline-element-work .element-date {
+	font-size: clamp(1.3rem, 1.5vmin, 1.7rem) !important;
+	font-weight: 700 !important;
+	color: $--card-accent-color;
+	opacity: 1 !important;
+	padding: 0.8em 0 0 !important;
+}
+
+@media only screen and (min-width: 1170px) {
+	.vertical-timeline-element-work .element-date {
+		color: $--card-color;
+		padding: 0.8em 0 !important;
+	}
 }
 
 @media only screen and (max-width: 1170px) {
