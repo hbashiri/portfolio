@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.5b5d1ff6.css",
-    "main.js": "/portfolio/static/js/main.0ad7c0fd.js",
+    "main.css": "/portfolio/static/css/main.831505a1.css",
+    "main.js": "/portfolio/static/js/main.0bb4865d.js",
     "static/media/7.png": "/portfolio/static/media/7.56159ae14a4d3f130116.png",
     "static/media/5.png": "/portfolio/static/media/5.6c88334c097f8bf79f6e.png",
     "static/media/1.png": "/portfolio/static/media/1.4cdd1d6983f2cc9c24c9.png",
@@ -12,7 +12,6 @@
     "static/media/8.png": "/portfolio/static/media/8.8d6fdf515c2a8ea2f082.png",
     "static/media/3.png": "/portfolio/static/media/3.b21f3572cfab659a2787.png",
     "static/media/waterfall1.png": "/portfolio/static/media/waterfall1.8eb3d9529a4f9d40d5b3.png",
-    "static/media/DominoColorBanner.png": "/portfolio/static/media/DominoColorBanner.f40c10f2614afb792f25.png",
     "static/media/waterfall2.png": "/portfolio/static/media/waterfall2.edac3b681e4a94713d44.png",
     "static/media/setting.png": "/portfolio/static/media/setting.0562e105b87b33871dfe.png",
     "static/media/mushroom.png": "/portfolio/static/media/mushroom.0a1311be43a6577f5fc0.png",
@@ -45,11 +44,11 @@
     "static/media/playground_icon.jpg": "/portfolio/static/media/playground_icon.d86839260d70de054887.jpg",
     "static/media/f_cload1.png": "/portfolio/static/media/f_cload1.a97294774b2038220739.png",
     "index.html": "/portfolio/index.html",
-    "main.5b5d1ff6.css.map": "/portfolio/static/css/main.5b5d1ff6.css.map",
-    "main.0ad7c0fd.js.map": "/portfolio/static/js/main.0ad7c0fd.js.map"
+    "main.831505a1.css.map": "/portfolio/static/css/main.831505a1.css.map",
+    "main.0bb4865d.js.map": "/portfolio/static/js/main.0bb4865d.js.map"
   },
   "entrypoints": [
-    "static/css/main.5b5d1ff6.css",
-    "static/js/main.0ad7c0fd.js"
+    "static/css/main.831505a1.css",
+    "static/js/main.0bb4865d.js"
   ]
 }
