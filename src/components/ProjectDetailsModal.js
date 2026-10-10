@@ -32,8 +32,8 @@ class ProjectDetailsModal extends Component {
       }
       if (this.props.data.images) {
         var img = images.map((elem, i) => {
-          return <div style={{ height: '100%', width: '100%', flex: 1}}>
-              <img key={i} src={elem}
+          return <div key={i} style={{ height: '100%', width: '100%', flex: 1}}>
+              <img src={elem}
                    style={{ objectFit: 'contain',
                      maxHeight: sideLength,
                      maxWeight: sideLength,
@@ -44,7 +44,7 @@ class ProjectDetailsModal extends Component {
         });
         if (this.props.data.youtube) {
           img.splice(0, 0,
-            <div key={10} style={{ backgroundColor: "#fff", display: "flex" }}>
+            <div key="video" style={{ backgroundColor: "#fff", display: "flex" }}>
               <iframe
                 src={`https://www.youtube.com/embed/${this.props.data.youtube}`}
                 style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}
@@ -58,8 +58,8 @@ class ProjectDetailsModal extends Component {
         }
       }
       if (this.props.data.description) {
-        description = this.props.data.description.split('\n').map(i => {
-          return <p className="modal-description">{i}</p>
+        description = this.props.data.description.split('\n').map((line, i) => {
+          return <p key={i} className="modal-description">{line}</p>
         });
       }
     }
