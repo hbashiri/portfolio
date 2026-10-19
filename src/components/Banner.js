@@ -1,148 +1,32 @@
-import React, { Component } from "react";
+import React from "react";
 import "../css/Banner.css";
-import { calculateBannerHeight } from "../utils/bannerHeight";
 
-import sky from '../assets/images/banner/sky.gif'
-import forground from '../assets/images/banner/rebel_forground.gif'
-import bCloud1 from '../assets/images/banner/b_cload1.png'
-import bCloud2 from '../assets/images/banner/b_cload2.png'
-import bCloud3 from '../assets/images/banner/b_cload3.png'
-import fCloud1 from '../assets/images/banner/f_cload1.png'
-import fCloud2 from '../assets/images/banner/f_cload2.png'
-import fCloud3 from '../assets/images/banner/f_cload3.png'
+import sky from "../assets/images/banner/sky.gif";
+import foreground from "../assets/images/banner/rebel_forground.gif";
+import bCloud1 from "../assets/images/banner/b_cload1.png";
+import bCloud2 from "../assets/images/banner/b_cload2.png";
+import bCloud3 from "../assets/images/banner/b_cload3.png";
+import fCloud1 from "../assets/images/banner/f_cload1.png";
+import fCloud2 from "../assets/images/banner/f_cload2.png";
+import fCloud3 from "../assets/images/banner/f_cload3.png";
 
-class Banner extends Component {
+// Back-to-front cloud layers; each index has its own drift speed in Banner.css.
+const clouds = [bCloud1, bCloud1, bCloud2, bCloud3, fCloud1, fCloud2, fCloud3, fCloud2];
 
-    constructor() {
-        super();
-        this.state = {bannerSize: 10000 };
-    }
-
-    componentDidMount() {
-        this.setState({bannerSize: calculateBannerHeight(window.innerHeight, window.innerWidth)});
-        window.addEventListener("orientationchange", this.onOrientationChange);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener("orientationchange", this.onOrientationChange);
-    }
-
-    // Dimensions are still pre-rotation when this fires, so they are passed swapped.
-    onOrientationChange = () => {
-        this.setState({bannerSize: calculateBannerHeight(window.innerWidth, window.innerHeight)});
-    };
-
-  render() {
-    return (
-      <div id="banner" style={{
-        height: this.state.bannerSize,
-        width: '100%',
-        position: 'relative',
-        overflowX: 'hidden',
-        overflowY: 'hidden',
-      }}>
-        <div id="sky"
-             style={{
-               height: this.state.bannerSize,
-               width: '100%',
-               position: 'absolute',
-               left: 0,
-               top: 0,
-               display: 'flex',
-               flex: 1,
-               justifyContent: 'center',
-               alignItems: 'flex-end',
-             }}
-        >
-          <img src={sky} style={{flex: 1 ,aspectRatio: 3.2}} />
+// The pixel-art scene from Rebel. Every layer is the same 3.2:1 image stretched to fill the scene,
+// so the whole sky (moon included) is always visible; the scene's height follows its width.
+function Banner() {
+  return (
+    <div className="banner" aria-hidden="true">
+      <img className="banner__layer" src={sky} alt="" />
+      {clouds.map((src, i) => (
+        <div className="banner__layer banner__clip" key={i}>
+          <img className={`banner__cloud cloud${i}`} src={src} alt="" />
         </div>
-        <div id="cloud0"
-             style={{height: this.state.bannerSize,
-                 width: this.state.bannerSize * 3.2}}
-             className="cloud cloud0"
-        >
-          <img src={bCloud1} style={{flex: 1 ,aspectRatio: 3.2}} />
-        </div>
-        <div id="cloud1"
-             style={{height: this.state.bannerSize,
-                 width: this.state.bannerSize * 3.2}}
-             className="cloud cloud1"
-        >
-          <img src={bCloud1} style={{flex: 1 ,aspectRatio: 3.2}} />
-        </div>
-        <div id="cloud2"
-             className="cloud cloud2"
-             style={{
-               height: this.state.bannerSize,
-                 width: this.state.bannerSize * 3.2
-             }}
-        >
-          <img src={bCloud2} style={{flex: 1 ,aspectRatio: 3.2}} />
-        </div>
-        <div id="cloud3"
-             className="cloud cloud3"
-             style={{
-               height: this.state.bannerSize,
-                 width: this.state.bannerSize * 3.2
-             }}
-        >
-          <img src={bCloud3} style={{flex: 1 ,aspectRatio: 3.2}} />
-        </div>
-        <div id="cloud4"
-             className="cloud cloud4"
-             style={{
-               height: this.state.bannerSize,
-                 width: this.state.bannerSize * 3.2
-             }}
-        >
-          <img src={fCloud1} style={{flex: 1 ,aspectRatio: 3.2}} />
-        </div>
-        <div id="cloud5"
-             className="cloud cloud5"
-             style={{
-               height: this.state.bannerSize,
-                 width: this.state.bannerSize * 3.2
-             }}
-        >
-          <img src={fCloud2} style={{flex: 1 ,aspectRatio: 3.2}} />
-        </div>
-        <div id="cloud6"
-             className="cloud6 cloud"
-             style={{
-                 height: this.state.bannerSize,
-                 width: this.state.bannerSize * 3.2
-             }}
-        >
-          <img src={fCloud3} style={{flex: 1 ,aspectRatio: 3.2}} />
-        </div>
-        <div id="cloud7"
-             className="cloud7 cloud"
-             style={{
-               height: this.state.bannerSize,
-                 width: this.state.bannerSize * 3.2
-             }}
-        >
-          <img src={fCloud2} style={{flex: 1 ,aspectRatio: 3.2}} />
-        </div>
-        <div id="forground"
-             style={{
-               height: this.state.bannerSize,
-               width: '100%',
-               position: 'absolute',
-               left: 0,
-               top: 0,
-               display: 'flex',
-               flex: 1,
-               justifyContent: 'center',
-               alignItems: 'flex-end',
-             }}
-        >
-          <img src={forground} style={{flex: 1 ,aspectRatio: 3.2}} />
-        </div>
-      </div>
-
-    );
-  }
+      ))}
+      <img className="banner__layer" src={foreground} alt="" />
+    </div>
+  );
 }
 
 export default Banner;
