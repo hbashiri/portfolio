@@ -670,26 +670,66 @@ a {
 	}
 }
 
+// Phones: the whole hero (text, land, character and moon) fits in the first screen.
 @media (max-width: 767px) {
 	.hero__content {
 		grid-template-columns: 1fr;
-		gap: 24px;
-		padding-top: calc(var(--nav-height) + 24px);
+		gap: 16px;
+		padding-top: calc(var(--nav-height) + 8px);
 		// The cloud tops start about a quarter of the way down the scene; keep the bio above them.
-		padding-bottom: calc(max(100vw, 1100px) / 3.2 * 0.78);
+		padding-bottom: calc(800px / 3.2 * 0.78);
 	}
 
 	.hero__aside {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: flex-start;
+		gap: 12px 16px;
 		padding-top: 0;
 	}
 
 	.hero__avatar {
-		width: 96px;
-		height: 96px;
+		width: 80px;
+		height: 80px;
 		border-width: 3px;
+		box-shadow: 0 0 0 5px rgba(44, 177, 150, 0.12);
+	}
+
+	.hero__title {
+		font-size: clamp(36px, 10.5vw, 44px);
+	}
+
+	.hero__typed {
+		min-height: 1.4em;
+		margin: 6px 0 14px;
+		font-size: 20px;
+	}
+
+	.hero__bio {
+		font-size: 15px;
+		line-height: 1.65;
+	}
+
+	// Only the first bio paragraph fits on one screen alongside the art.
+	.hero__bio + .hero__bio {
+		display: none;
+	}
+
+	// A smaller scene, shifted left so the visible slice runs from the portal through the
+	// character to the moon (the moon sits ~73% across the art) instead of the centered middle.
+	.hero__scene {
+		left: min(0px, calc(100vw - 800px * 0.82));
+		width: 800px;
+		transform: none;
+	}
+
+	// Centered, the arrow covers the character; tuck it into the bottom-right corner instead.
+	.hero__scroll {
+		right: 16px;
+		bottom: 16px;
+		left: auto;
+		transform: none;
+		animation: none;
 	}
 }
 
