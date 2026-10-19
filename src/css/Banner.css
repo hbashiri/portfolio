@@ -10,6 +10,10 @@
     inset: 0;
     width: 100%;
     height: 100%;
+    /* Vertical parallax (same formula as the reference site): as the page scrolls, far layers
+       (low --depth) move down more than near ones, so the moon and clouds sink behind the ground. */
+    transform: translate3d(0, calc(var(--scroll, 0) * (1 - var(--depth, 1)) * 0.45px), 0);
+    will-change: transform;
 }
 
 .banner__clip {
@@ -46,6 +50,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .banner__layer {
+        transform: none;
+    }
+
     .banner__cloud {
         animation: none;
         left: 0;

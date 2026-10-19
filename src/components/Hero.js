@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Banner from "./Banner";
 import { goToSection } from "../hooks/useHashRoute";
 import { profile } from "../data/portfolio";
@@ -31,6 +31,30 @@ function useTypedTitles(titles) {
   return text;
 }
 
+// Publishes the scroll position as `--scroll` on the given element (once per frame) for the
+// banner's CSS parallax. Stops changing once the element has scrolled out of view.
+function useScrollVar(ref) {
+  useEffect(() => {
+    const el = ref.current;
+    const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!el || reduceMotion) return undefined;
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      el.style.setProperty("--scroll", Math.min(window.scrollY, el.offsetHeight));
+    };
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (frame) cancelAnimationFrame(frame);
+    };
+  }, [ref]);
+}
+
 // Pixel stars scattered over the night sky above the scene. The positions come from a fixed
 // pattern rather than Math.random so they stay put between renders.
 const stars = Array.from({ length: 46 }, (_, i) => ({
@@ -44,9 +68,11 @@ const stars = Array.from({ length: 46 }, (_, i) => ({
 function Hero() {
   const typed = useTypedTitles(profile.titles);
   const linkedin = profile.socials.find((s) => s.name === "LinkedIn");
+  const heroRef = useRef(null);
+  useScrollVar(heroRef);
 
   return (
-    <section id="home" className="hero">
+    <section id="home" className="hero" ref={heroRef}>
       <div className="hero__stars" aria-hidden="true">
         {stars.map((star, i) => (
           <span key={i} style={star} />
