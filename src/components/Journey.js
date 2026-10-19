@@ -11,7 +11,7 @@ function Journey() {
             number="02"
             eyebrow="Journey"
             title="Where I’ve levelled up"
-            intro="From a freelance puzzle game to leading a studio project — each stop added a new skill tree."
+            intro="From data science to leading Unity development on a studio title — each stop added a new skill tree."
           />
           <div className="journey__education reveal">
             <h3 className="journey__subheading">Education</h3>
@@ -37,7 +37,13 @@ function Journey() {
               <span className={"timeline__marker" + (job.current ? " timeline__marker--current" : "")} />
               <article className="job-card">
                 <header className="job-card__header">
-                  <img className="logo-tile" src={job.logo} alt="" />
+                  {job.logo ? (
+                    <img className="logo-tile" src={job.logo} alt="" />
+                  ) : (
+                    <span className="logo-tile logo-tile--icon" aria-hidden="true">
+                      <i className={job.icon || "fas fa-briefcase"} />
+                    </span>
+                  )}
                   <div className="job-card__heading">
                     <h3 className="job-card__title">{job.title}</h3>
                     <p className="job-card__company">{job.company}</p>

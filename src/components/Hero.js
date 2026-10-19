@@ -57,16 +57,23 @@ function Hero() {
           <img className="hero__avatar" src={profile.avatar} alt={profile.name} />
           {profile.location && (
             <p className="hero__location">
-              <i className="fas fa-map-marker-alt" /> {profile.location}
+              <i className="fas fa-map-marker-alt" /> Based in {profile.location}
             </p>
           )}
           <div className="hero__socials">
             {linkedin && (
-              <a className="icon-button" href={linkedin.url} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a
+                className="hero__link"
+                href={linkedin.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                title="LinkedIn"
+              >
                 <i className={linkedin.icon} />
               </a>
             )}
-            <a className="icon-button" href={`mailto:${profile.email}`} aria-label="Email">
+            <a className="hero__link" href={`mailto:${profile.email}`} aria-label="Email" title={profile.email}>
               <i className="fas fa-envelope" />
             </a>
           </div>

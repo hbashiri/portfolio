@@ -3,10 +3,10 @@
   "configurations": [
     {
       "name": "portfolio",
-      "runtimeExecutable": "npm",
+      "runtimeExecutable": "C:\\PROGRA~1\\nodejs\\npm.cmd",
       "runtimeArgs": ["start"],
-      "env": { "BROWSER": "none" },
-      "port": 3000
+      "env": { "BROWSER": "none", "PORT": "3001" },
+      "port": 3001
     }
   ]
 }
