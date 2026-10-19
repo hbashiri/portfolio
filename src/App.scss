@@ -499,7 +499,7 @@ a {
 	align-items: start;
 	padding-top: calc(var(--nav-height) + 64px);
 	// Leave room for the ground and clouds so the text only overlaps the open sky.
-	padding-bottom: calc(100vw / 3.2 * 0.6);
+	padding-bottom: calc(max(100vw, 1100px) / 3.2 * 0.6);
 }
 
 .hero__aside {
@@ -634,11 +634,14 @@ a {
 }
 
 // The whole scene sits at the bottom of the hero behind the text, never cropped.
+// Like the reference, the scene never shrinks below 1100px wide: on narrow screens it stays
+// centered and the hero (overflow: hidden) crops its sides instead of scaling the art down.
 .hero__scene {
 	position: absolute;
-	right: 0;
 	bottom: 0;
-	left: 0;
+	left: 50%;
+	width: max(100%, 1100px);
+	transform: translateX(-50%);
 	pointer-events: none;
 }
 
@@ -672,6 +675,8 @@ a {
 		grid-template-columns: 1fr;
 		gap: 24px;
 		padding-top: calc(var(--nav-height) + 24px);
+		// The cloud tops start about a quarter of the way down the scene; keep the bio above them.
+		padding-bottom: calc(max(100vw, 1100px) / 3.2 * 0.78);
 	}
 
 	.hero__aside {
