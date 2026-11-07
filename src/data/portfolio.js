@@ -123,6 +123,23 @@ export const nowBuilding = {
   steam: "https://store.steampowered.com/app/3150160/Another_Pint/",
 };
 
+// Shown both in section 03 (features) and on the Another Pint page (`features`).
+const grassShader = {
+  eyebrow: "Shader · Another Pint",
+  title: "Interactive grass shader",
+  youtube: "aOBqrSxEqLs",
+  description:
+    "Grass for Another Pint's open world that sways in the wind and parts around the player, done entirely with vertex displacement in a URP Shader Graph: no physics and no per-blade CPU cost.",
+  bullets: [
+    "Wind noise sampled per object in world space, so clumps bend together and gusts roll across the field",
+    "The same noise sample tints the grass, so visible waves of wind match the motion for free",
+    "Player position sent once per tick as a global shader vector: any grass reacts with no setup, and batching keeps working",
+    "Height-masked radial push and compression flatten the tips around the player while the roots stay anchored",
+    "Shading layers world-space color patches, a ground-contact gradient, fake subsurface scattering, screen-space dithering and weather-driven wetness",
+  ],
+  tags: ["Unity", "URP", "Shader Graph"],
+};
+
 // category: "studio" or "indie" (drives the filter on the Work section).
 // thumbFit: "icon" shows a square app icon on a blurred backdrop; "cover" fills the card with the image.
 export const games = [
@@ -152,6 +169,7 @@ export const games = [
       "Defining tasks, estimating and planning sprints, and running code reviews",
       "Guiding teammates on technical tasks and helping hire and onboard new developers",
     ],
+    features: [grassShader],
   },
   {
     slug: "ephemeral-light",
@@ -427,6 +445,7 @@ export const showcases = {
   ],
   // TODO: Hamid plans to add more features here.
   features: [
+    grassShader,
     {
       eyebrow: "AI system · NoOp Army",
       icon: "fas fa-brain",

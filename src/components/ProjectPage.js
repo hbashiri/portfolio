@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Lightbox from "./Lightbox";
-import { Tags, YouTube } from "./common";
+import { Tags, Bullets, YouTube } from "./common";
 import { projectHref, goToSection } from "../hooks/useHashRoute";
 import { storeName } from "../utils/storeName";
 import { games, profile } from "../data/portfolio";
@@ -97,6 +97,20 @@ function ProjectPage({ slug }) {
                   <li key={item}>{item}</li>
                 ))}
               </ul>
+            </section>
+          )}
+
+          {game.features?.length > 0 && (
+            <section className="project__block">
+              <h2 className="project__heading">Feature highlights</h2>
+              {game.features.map((feature) => (
+                <div className="project__feature" key={feature.title}>
+                  <YouTube id={feature.youtube} title={feature.title} />
+                  <h3 className="project__feature-title">{feature.title}</h3>
+                  <p>{feature.description}</p>
+                  <Bullets items={feature.bullets} />
+                </div>
+              ))}
             </section>
           )}
 
