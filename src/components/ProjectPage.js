@@ -86,6 +86,13 @@ function ProjectPage({ slug }) {
               {game.about.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
+              {game.highlights?.length > 0 && (
+                <ul className="bullets bullets--large">
+                  {game.highlights.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              )}
             </section>
           )}
 

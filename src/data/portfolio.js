@@ -120,7 +120,7 @@ export const nowBuilding = {
     "Another Pint is a dynamic management game where you get to build and run your own medieval tavern. Tasked with taking over a barebones shack, where you take it is up to you.",
     "As lead developer, I design and build new systems, refactor existing ones, and give feedback on design and art along the way. In a small indie team my role goes beyond code: I also run the task board and help shape realistic milestones and priorities.",
   ],
-  youtube: "MsRqJJk6IPA",
+  youtube: "q1MUTk3SQrg",
   steam: "https://store.steampowered.com/app/3150160/Another_Pint/",
 };
 
@@ -157,11 +157,19 @@ export const games = [
     thumbFit: "cover",
     availableOn: "Steam (wishlist)",
     url: "https://store.steampowered.com/app/3150160/Another_Pint/",
-    youtube: "MsRqJJk6IPA",
+    youtube: "q1MUTk3SQrg",
     images: [ap01, ap02, ap03, ap04, ap05, ap06, ap07, ap08, ap09, ap10, ap11, ap12, ap13, ap14],
     about: [
-      "Build and run your own medieval tavern in Another Pint, a systems-driven management game. Starting with little more than an abandoned shack, it is up to you to turn it into a thriving establishment.",
-      "Grow your tavern, discover ingredients, and brew special drinks to keep your patrons coming back.",
+      "In Another Pint you turn a run-down shack into a medieval tavern of your own: a cozy village inn, a rowdy alehouse, or the most famous tavern in the land. Between serving patrons, you head out into the world to find ingredients, take on quests and grow your name.",
+    ],
+    // Bullets under "About the game".
+    highlights: [
+      "Explore forests, ruins and points of interest for rare ingredients, or farm your own crops for a steady supply",
+      "Brew drinks by boiling, fermenting and juicing, or chain several stations together for more complex recipes, then name, price and add them to a menu built around your patrons' tastes",
+      "Build and decorate the tavern room by room, and add bedrooms to rent out to weary travelers",
+      "Hire employees and give them tasks to automate the tavern, so it keeps running while you're out exploring",
+      "Serve patrons with their own personalities and needs, meet characters through branching quests, and trade with merchants as prices shift",
+      "Customize your character and banner, level up your attributes, and live through a day-night cycle with changing weather",
     ],
     contributions: [
       "Designing and implementing core gameplay features, animations and lighting systems",
