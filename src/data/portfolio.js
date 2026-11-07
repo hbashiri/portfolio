@@ -118,6 +118,7 @@ export const nowBuilding = {
   meta: ["Tavern management sim", "PC", "Coming 2027"],
   description: [
     "Another Pint is a dynamic management game where you get to build and run your own medieval tavern. Tasked with taking over a barebones shack, where you take it is up to you.",
+    "As lead developer, I design and build new systems, refactor existing ones, and give feedback on design and art along the way. In a small indie team my role goes beyond code: I also run the task board and help shape realistic milestones and priorities.",
   ],
   youtube: "MsRqJJk6IPA",
   steam: "https://store.steampowered.com/app/3150160/Another_Pint/",
@@ -129,10 +130,9 @@ const grassShader = {
   title: "Interactive grass shader",
   youtube: "aOBqrSxEqLs",
   description:
-    "Grass for Another Pint's open world that sways in the wind and parts around the player, done entirely with vertex displacement in a URP Shader Graph: no physics and no per-blade CPU cost.",
+    "Grass that sways in the wind and parts around the player, done entirely with vertex displacement in a URP Shader Graph: no physics and no per-blade CPU cost.",
   bullets: [
-    "Wind noise sampled per object in world space, so clumps bend together and gusts roll across the field",
-    "The same noise sample tints the grass, so visible waves of wind match the motion for free",
+    "Wind noise sampled per object in world space moves clumps together in rolling gusts, and the same sample tints the grass so visible waves of wind match the motion for free",
     "Player position sent once per tick as a global shader vector: any grass reacts with no setup, and batching keeps working",
     "Height-masked radial push and compression flatten the tips around the player while the roots stay anchored",
     "Shading layers world-space color patches, a ground-contact gradient, fake subsurface scattering, screen-space dithering and weather-driven wetness",

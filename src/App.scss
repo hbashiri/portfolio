@@ -1243,11 +1243,14 @@ a {
 	gap: 14px;
 }
 
-.tool-card__title {
+// One title size for every card in the TFW (tools, features & writing) section.
+.tool-card__title,
+.mini-card__title,
+.article-card__title {
 	font-family: var(--font-display);
-	font-size: clamp(30px, 3.6vw, 40px);
+	font-size: 22px;
 	font-weight: 700;
-	line-height: 1.1;
+	line-height: 1.25;
 }
 
 .tool-card__description {
@@ -1335,12 +1338,6 @@ a {
 	font-size: 18px;
 }
 
-.mini-card__title {
-	font-family: var(--font-display);
-	font-size: 20px;
-	font-weight: 700;
-}
-
 .mini-card__description {
 	color: var(--text-soft);
 	font-size: 14px;
@@ -1397,13 +1394,6 @@ a {
 .article-card__meta {
 	color: var(--muted);
 	font-size: 12px;
-}
-
-.article-card__title {
-	font-family: var(--font-display);
-	font-size: 22px;
-	font-weight: 700;
-	line-height: 1.25;
 }
 
 .article-card__summary {
